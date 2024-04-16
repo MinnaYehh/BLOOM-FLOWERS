@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    nav{
+    background-color: #fa0;
+    width: 200px;
+
+    }
+    .sub-menu{
+    display: none;
+    }
+    .main-menu>li{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .main-menu>li>label{
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+    }
+    .main-menu > li label:has( input:checked) + .sub-menu{
+        display: block;
+    }
+    .main-menu > li a{
+        width: 0;
+        padding: 6px 10px;
+        flex-grow: 1;
+    }
+    .main-menu > li label :has( input:checked){
+        scale:1 -1;
+    }
+    .main-menu > li >label input{
+    display: none;
+    }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Link 1</a>
+                <label>
+                    <input type="checkbox" id="" for="">▼
+                </label>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#">sub link 1-1</a>
+                        </li>
+                        <li>
+                            <a href="#">sub link 1-2</a>
+                        </li>
+                        <li>
+                            <a href="#">sub link 1-3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Link 2</a>
+                    <label>
+                        <input type="checkbox" id="" for="">▼
+                    </label>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#">sub link 2-1</a>
+                        </li>
+                        <li>
+                            <a href="#">sub link 2-2</a>
+                        </li>
+                        <li>
+                            <a href="#">sub link 2-3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Link 3</a>
+                    <label>
+                        <input type="checkbox" id="" for="">▼
+                    </label>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#">sub link 3-1</a>
+                        </li>
+                        <li>
+                            <a href="#">sub link 3-2</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+
+
+    
+</body>
+</html>

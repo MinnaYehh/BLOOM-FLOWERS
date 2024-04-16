@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /* *{
+        margin: 0px;
+        padding: 0px;
+    } */
+
+    nav{
+        display: flex;
+        background: #ddd;
+
+    }
+
+    nav a {
+        background-color: rgb(177, 169, 156);
+        position: relative;
+        text-decoration: none;
+        overflow: hidden;
+        border: 2px solid black;
+    }
+
+    nav a span{
+        display: block;
+        padding: 10px;
+        color: aliceblue;
+        font-weight: 800;
+        transition: 1s;
+    }
+
+    nav a span:last-child{
+        position: absolute;
+        color: #fff;
+        background-color: greenyellow;
+        }
+    nav a:hover span{
+        translate: 0 -100%;
+    }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="#">
+        <span>about</span>
+        <span>about</span>
+    </a>
+    <a href="#">
+        <span>service</span>
+        <span>service</span>
+    </a>
+    <a href="#">
+        <span>contact me</span>
+        <span>contact me</span>
+    </a>
+</nav>
+</body>
+</html>

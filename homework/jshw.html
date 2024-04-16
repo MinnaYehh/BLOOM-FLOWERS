@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 第一題: 設定變數存放今天的攝氏溫度(30度)寫程式將變數轉換成華氏溫度，將轉換結果顯示在頁面上。註:華氏=(攝氏)(9/5)+32 -->
+
+    <!-- 第二題: 設定變數存放到目前為止所經過的秒數(例如8000秒)，將轉換成時分秒後顯示在頁面上。 -->
+    <h2>第一題</h2>
+<script>
+        // a = 華氏溫度
+        // b = 攝氏溫度
+    var b = 30;
+    var a = (b) * (9/5) + 32;
+    documemt.write("<p>攝氏 :" + b +"度</p>");
+    documemt.write("<p>華氏 :" + a +"度</p>");
+</script>
+
+    <h2>第二題</h2>
+<script>
+    var x = 8000;
+    var y= x / 3600;
+    var z= x % 3600 / 60;
+    var s= x % 3600 % 60;
+    var html= `<td>${y}</td><th>hour</th>
+    <td>${z}</td><th>minute</th>
+    <td>${s}</td><th>second</th>`
+    document.write(html);
+</script>
+</body>
+
+
+
+</html>

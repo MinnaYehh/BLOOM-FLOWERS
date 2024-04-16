@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            width: 200px;
+            background-color: #faa;
+        }
+        @media screen and(min-width:768px){
+            nav{
+                width: auto;
+            }
+            .main-menu{
+                display: flex;
+            }
+        }
+        .main-menu a{
+            display: block;
+            text-decoration: none;
+        }
+        
+        .main-menu > li {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .main-menu > li > label {
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+        }
+        .main-menu > li label:has(input:checked) + .sub-menu {
+            max-height: 500px;
+        }
+        .main-menu > li > label input {
+            display: none;
+        }
+        .main-menu > li label:has( input:checked) {
+            scale: 1 -1;
+        }
+        .main-menu > li a {
+            width: 0;
+            padding: 6px 10px;
+            flex-grow: 1;
+            display: flex;
+        }
+        .sub-menu {
+            max-height: 0px;
+            overflow: hidden;
+            width: 100%;
+            transition: 3s;
+            /* display: none; */
+        }
+        @media screen and(min-width:768px){
+            .sub-menu{
+                display: none;
+                position: absolute;
+                background-color: #f00;
+                width: 200px;
+                max-height: unset;
+                }
+                li:hover > .sub-menu{
+                    display: block;
+                }
+
+        }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <ul class="main-menu">
+                <li>
+                    <a href="#">link one</a>
+                    <label>
+                        <input type="checkbox" name="" id="">
+                        ▼
+                    </label>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#">sub link 1-1</a>
+                        </li>
+                        <li>
+                            <a href="#">sub link 1-2</a>
+                        </li>
+                        <li>
+                            <a href="#">sub link 1-3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">link two</a>
+                    <label>
+                        <input type="checkbox" name="" id="">
+                        ▼
+                    </label>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#">sub link 2-1</a>
+                        </li>
+                        <li>
+                            <a href="#">sub link 2-2</a>
+                        </li>
+                        <li>
+                            <a href="#">sub link 2-3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">link three</a>
+                    <label>
+                        <input type="checkbox" name="" id="">
+                        ▼
+                    </label>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#">sub link 3-1</a>
+                        </li>
+                        <li>
+                            <a href="#">sub link 3-2</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+
+
+    
+</body>
+</html>
