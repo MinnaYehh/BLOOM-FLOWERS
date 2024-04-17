@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            }
+        .header {
+            background-color: #f2f1ed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            z-index: 5;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            } 
+            .top img {
+            width: 70px;
+            height: 70px;
+            margin: 10px;
+        }
+        .top {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .header-list{
+            display: flex;
+            flex-grow: 1;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+        .header-list li {
+            font-size: 18px;
+            margin: auto;
+            position: relative;
+            font-family: Noto Sans TC;
+            padding: 20px;
+        }
+        .header-list li:hover {
+            background-color: #78bc8e;
+        }
+
+        .header-list li:hover a {
+            color: #f5f8f7;
+        }
+
+        .header-list li a {
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+        }
+        .fa-solid {
+            font-weight: 900;
+            color: black;
+        }
+        .header-icon {
+            display: flex;
+            padding-right: 50px;
+            margin: auto;
+            list-style: none;
+            align-content: center;
+        }
+        .header-icon li {
+            font-style: 24px;
+            margin-left: 10px;
+        }
+        /* content*/
+        .card-list{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        width: 90%;
+        margin-left: 40px;
+        }
+
+        .card-list img{
+        width: 80%;
+        height: 350px;
+        margin: 10px;
+        }
+        .story-title{
+        color: #00501b;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        } 
+        .article{
+        border: 1px solid #faa;
+        width: 500px;
+        height: 600px;
+
+        
+        }
+        .article-title{
+        color: #fa0;
+        text-align: center;
+        font-size: 28px;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        }
+
+        .txt p{
+        text-align: center;
+        color: #aaa;
+        font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="top">
+            <a href="#"><img src="logo.png" alt="header-logo"></a>
+            <ul class="header-list">
+                <li><a href="#">關於我們</a></li>
+                <li><a href="#">花禮分類</a></li>
+                <li><a href="project-02.html">送花推薦</a></li>
+                <li><a href="project-04.html">最新消息</a></li>
+                <li><a href="#">婚禮系列</a></li>
+            </ul>
+            <ul class="header-icon">
+                <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </div>
+    </header> 
+        <div class="story-title">
+            <h2>品牌故事</h2>
+        </div>
+    <div class="card-list">
+        <img src="brand01.jpg" alt="">
+        <img src="brand02.jpg" alt="">
+        <img src="brand03.jpg" alt="">
+    </div> 
+    <section class="article">
+        <div class="article-title">花藝設計造景者</div>
+        <div class="txt">我們的故事始於一位對花卉懷抱深深熱愛的設計師，他夢想著將大自然的美好融入人們的日常生活。他相信花朵不僅僅是裝飾，更是情感的傳遞者，能夠為人們帶來安慰、喜悅和希望。於是，他創立了「BLOOM FLOWERS」，致力於將每一份感動轉化為可觸摸的藝術。
+            我們信奉花朵擁有其獨特的語言。不論是柔和的粉色玫瑰象徵的初戀，還是熱情的紅色鬱金香傳達的深切情感，每一種花卉都有其自身的故事與意義。設計師團隊憑藉精湛的工藝和對細節的專注，將這些故事編織成精美的花束，不僅為顧客的特別時刻添彩，也為日常生活帶來一抹自然的色彩。</div>
+    </section>
+</body>
+</html>

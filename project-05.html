@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <style>
+            *{
+            margin: 0;
+            padding: 0;
+            }
+        .header {
+            background-color: #f2f1ed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            z-index: 5;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            } 
+            .top img {
+            width: 70px;
+            height: 70px;
+            margin: 10px;
+        }
+        .top {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .header-list{
+            display: flex;
+            flex-grow: 1;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+        .header-list li {
+            font-size: 18px;
+            margin: auto;
+            position: relative;
+            font-family: Noto Sans TC;
+            padding: 20px;
+        }
+        .header-list li:hover {
+            background-color: #78bc8e;
+        }
+
+        .header-list li:hover a {
+            color: #f5f8f7;
+        }
+
+        .header-list li a {
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+        }
+        .fa-solid {
+            font-weight: 900;
+            color: black;
+        }
+        .header-icon {
+            display: flex;
+            padding-right: 50px;
+            margin: auto;
+            list-style: none;
+            align-content: center;
+        }
+        .header-icon li {
+            font-style: 24px;
+            margin-left: 10px;
+        }
+        /* content */
+        .section-one{
+        display: flex;
+        justify-content: center;
+        width: 60%;
+        align-items: center;
+        align-content: center;
+        margin: 0 auto;
+        margin-top: 40px;
+
+        }
+        .brand01 img{
+        width: 90%;
+        height: 300px;
+        } 
+        .brand{
+        width: 90%;
+        height: 300px;
+        background-color:#F8F0ED;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+        .brand-txt{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin-top: 50px; */
+        letter-spacing: 2px;
+        text-align: center;
+        }
+        .brand01{
+        width: 20%;
+        height: 300px;
+        }
+        .brand-pink{
+        width: 50%;
+        height: 300px;
+        }
+        .section-two{
+        width: 100%;
+        display: flex;
+        }
+        .brand02{
+        width: 40%;
+        }
+        .brand02 img{
+        width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="top">
+            <a href="#"><img src="logo.png" alt="header-logo"></a>
+            <ul class="header-list">
+                <li><a href="#">關於我們</a></li>
+                <li><a href="#">花禮分類</a></li>
+                <li><a href="project-02.html">送花推薦</a></li>
+                <li><a href="project-04.html">最新消息</a></li>
+                <li><a href="#">婚禮系列</a></li>
+            </ul>
+            <ul class="header-icon">
+                <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="story-section">
+        <div class="section-one">
+            <div class="brand-pink">
+                <div class="brand">
+                    <div class="brand-txt">我們的設計師團隊專注於捕捉自然的美好，用專業設計理念轉化為獨特的花藝作品。我們的每一道設計蘊含著對生活的熱愛和對美的追求，並熱情注入到每一束花的創作過程中。</div>
+                </div>
+            </div>
+            <div class="brand01">
+                <img src="brand01.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="section-two">
+        <div class="brand02">
+            <img src="brand02.jpg" alt="">
+        </div>
+        <div class="skin -color">
+            <div class="info-txt">無論是慶祝生日、紀念日，還是表達愛意和祝福，Bloom Flowers都能為您打造出令人難忘的花束和花藝裝飾，讓每個特殊時刻都充滿溫馨和美好。
+            </div>
+        </div>
+    </div>
+</body>
+</html>
