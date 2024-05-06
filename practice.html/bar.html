@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>dropdown menu</title>
+    <style>
+   
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    .menu-bar{
+    background-color: #f2f1ed;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+    }
+
+    .logo img{
+    width: 60px;
+    height: 60px;
+    }
+
+    .menu-bar ul{
+    list-style: none;
+    display: flex;
+    }
+    .menu-bar ul li{
+    padding: 10px 15px;
+    position: relative;
+    }
+    .menu-bar ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.5s;
+    font-weight: 600;
+    }
+    .menu-bar ul li a:hover{
+    color: green;
+    }
+    /* dropdown */
+    .dropdown-menu-wedding {
+    display: none;
+    }
+    .dropdown-menu-news{
+    display: none;
+    }
+    .dropdown-menu-recommend{
+    display: none;
+    }
+    .dropdown-menu-category{
+    display: none;
+    }
+    .dropdown-menu-about{
+    display: none;
+    }
+/* dropdown */
+    .menu-bar ul li:hover .dropdown-menu-wedding{
+    display: block;
+    position: absolute;
+    left:0;
+    top: 100%;
+    background-color: #F3E9C4;
+    }
+    .menu-bar ul li:hover .dropdown-menu-news{
+    display: block;
+    position: absolute;
+    left:0;
+    top: 100%;
+    background-color: #F3E9C4;
+    }
+    .menu-bar ul li:hover .dropdown-menu-recommend{
+    display: block;
+    position: absolute;
+    left:0;
+    top: 100%;
+    background-color: #F3E9C4;
+    }
+    .menu-bar ul li:hover .dropdown-menu-category{
+    display: block;
+    position: absolute;
+    left:0;
+    top: 100%;
+    background-color: #F3E9C4;
+    }
+    .menu-bar ul li:hover .dropdown-menu-about{
+    display: block;
+    position: absolute;
+    left:0;
+    top: 100%;
+    background-color: #F3E9C4;
+    }
+/* dropdown */
+    .dropdown-menu-wedding ul{
+    display: block;
+    margin: 10px;
+    }
+    .dropdown-menu-news ul{
+    display: block;
+    margin: 10px;
+    }
+    .dropdown-menu-recommend ul{
+    display: block;
+    margin: 10px;
+    }
+    .dropdown-menu-category ul{
+    display: block;
+    margin: 10px;
+    }
+    .dropdown-menu-about ul{
+    display: block;
+    margin: 10px;
+    }
+    /* dropdown */
+    .dropdown-menu-wedding ul li{
+    width: 150px;
+    padding: 10px;
+    }
+    .dropdown-menu-news ul li{
+    width: 150px;
+    padding: 10px;
+    }
+    .dropdown-menu-recommend ul li{
+    width: 150px;
+    padding: 10px;
+    }
+    .dropdown-menu-category ul li{
+    width: 150px;
+    padding: 10px;
+    }
+    .dropdown-menu-about ul li{
+    width: 150px;
+    padding: 10px;
+    }
+    .fas{
+    float: right;
+    padding-top: 3px;
+    margin-left: 10px;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="menu-bar">
+        <div class="logo">
+            <a href="index.html"><img src="logo.jpeg" alt=""></a>
+        </div>
+
+        <ul>
+            <li><a href="#">關於我們<i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-menu-about">
+                    <ul>
+                        <li><a href="#">花語故事</a></li>
+                        <li><a href="#">品牌故事</a></li>
+                    </ul>
+            </div>
+            </li>
+            <li><a href="#">花禮分類<i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-menu-category">
+                    <ul>
+                        <li><a href="#">鮮花束</a></li>
+                        <li><a href="#">鮮花花盆</a></li>
+                    </ul>
+            </div>
+            </li>
+            <li><a href="#">送花推薦<i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-menu-recommend">
+                    <ul>
+                        <li><a href="#">生日花束</a></li>
+                        <li><a href="#">母親節花束</a></li>
+                        <li><a href="#">畢業花束</a></li>
+                        <li><a href="#">情人節花束</a></li>
+                    </ul>
+            </div>    
+            </li>
+            <li><a href="#">最新消息<i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-menu-news">
+                <ul>
+                    <li><a href="#">活動推薦</a></li>
+                    <li><a href="#">得獎紀錄</a></li>
+                </ul>
+            </div>
+            </li>
+
+            <li><a href="#">婚禮系列<i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-menu-wedding">
+                <ul>
+                    <li><a href="#">胸花系列</a></li>
+                    <li><a href="#">捧花系列</a></li>
+                    <li><a href="#">客製化花圈</a></li>
+                </ul>
+            </div>
+            </li>
+            <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+    </div>
+</body>
+</html>

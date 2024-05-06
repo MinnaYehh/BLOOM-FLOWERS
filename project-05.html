@@ -2,169 +2,181 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <title>brand story</title>
+    <!-- <script src="js/jquery-3.7.1.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="slider.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script> -->
     <style>
-            *{
+        *{
             margin: 0;
             padding: 0;
-            }
-        .header {
-            background-color: #f2f1ed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            z-index: 5;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            } 
-            .top img {
-            width: 70px;
-            height: 70px;
-            margin: 10px;
+            box-sizing: border-box;
         }
-        .top {
+        .brand-story-title{
+            color: green;
             display: flex;
-            align-items: center;
             justify-content: center;
-            width: 100%;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
         }
-        .header-list{
+        .intro{
+            width: 100%;
             display: flex;
-            flex-grow: 1;
-            list-style: none;
-            margin: 0;
-            padding: 0;
+        }
+        .intro-img{
+            width: 50%;
+            display: flex;
+            justify-content: end;
+        }
+        .intro-img img{
+            width: 80%;
+            /* margin: 0 150px 0; */
+            height: 500px;
+            
+        }
+        .intro-words{
+            width: 50%;
+            font-size: 14px;
+            line-height: 2;
+            display: flex;
+            justify-content: center;
             align-items: center;
         }
-        .header-list li {
-            font-size: 18px;
-            margin: auto;
-            position: relative;
-            font-family: Noto Sans TC;
-            padding: 20px;
+        .intro-words p {
+        width: 100%;
+        padding: 0 100px;
+        
         }
-        .header-list li:hover {
-            background-color: #78bc8e;
-        }
-
-        .header-list li:hover a {
-            color: #f5f8f7;
-        }
-
-        .header-list li a {
-            text-decoration: none;
-            color: black;
-            font-weight: 500;
-        }
-        .fa-solid {
-            font-weight: 900;
-            color: black;
-        }
-        .header-icon {
+        .line{
             display: flex;
-            padding-right: 50px;
-            margin: auto;
-            list-style: none;
-            align-content: center;
+            justify-content: center;
+            align-items: center;
+            color: #0B5D43;
+            font-weight: 600;
+            margin: 40px;
         }
-        .header-icon li {
-            font-style: 24px;
-            margin-left: 10px;
-        }
-        /* content */
-        .section-one{
-        display: flex;
-        justify-content: center;
-        width: 60%;
-        align-items: center;
-        align-content: center;
-        margin: 0 auto;
-        margin-top: 40px;
 
-        }
-        .brand01 img{
-        width: 90%;
-        height: 300px;
-        } 
-        .brand{
-        width: 90%;
-        height: 300px;
-        background-color:#F8F0ED;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        }
-        .brand-txt{
+        .describe p{
+        line-height: 3;
         display: flex;
         justify-content: center;
-        align-items: center;
-        /* margin-top: 50px; */
-        letter-spacing: 2px;
         text-align: center;
+        align-items: center;
+        font-size: 14px;
         }
-        .brand01{
-        width: 20%;
-        height: 300px;
+        .three-words{
+        color: #3F3A36;
+        font-size: 18px;
+        font-weight: 500;
         }
-        .brand-pink{
-        width: 50%;
-        height: 300px;
-        }
-        .section-two{
-        width: 100%;
+        .image{
+	width: 100%;
+	height: 500px;
+    }
+
+/* sliders  */
+#sliderBoard{	/* div */
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	width: 60%;
+	height: 550px;
+	margin: 50px auto;
+
+	overflow: hidden;
+} 
+#content{		/* ul */
+	position: relative;
+}
+#content li{	/* li */
+	float: left;
+}
+
+/* circle button */
+#contentButton{
+	/* border: 1px solid red; */
+	text-align: center;
+	width: 100%;
+	height: 50px;
+}
+#contentButton li{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #ccc;
+	margin: 10px;
+
+	display: inline-block;
+}
+#contentButton li.clicked{
+	background-color: #666;
+}
+
+@media screen and (min-width: 768px) {
+    /* .intro {
         display: flex;
-        }
-        .brand02{
-        width: 40%;
-        }
-        .brand02 img{
-        width: 100%;
-        }
+    } */
+
+}
 
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="top">
-            <a href="#"><img src="logo.png" alt="header-logo"></a>
-            <ul class="header-list">
-                <li><a href="#">關於我們</a></li>
-                <li><a href="#">花禮分類</a></li>
-                <li><a href="project-02.html">送花推薦</a></li>
-                <li><a href="project-04.html">最新消息</a></li>
-                <li><a href="#">婚禮系列</a></li>
-            </ul>
-            <ul class="header-icon">
-                <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
-                <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            </ul>
+    <h2 class="brand-story-title">ABOUT BLOOM FLOWERS</h2>
+    <div class="intro">
+        <div class="intro-img">
+            <img src="../pictures/shop.jpeg" alt="">
         </div>
-    </header>
-    <div class="story-section">
-        <div class="section-one">
-            <div class="brand-pink">
-                <div class="brand">
-                    <div class="brand-txt">我們的設計師團隊專注於捕捉自然的美好，用專業設計理念轉化為獨特的花藝作品。我們的每一道設計蘊含著對生活的熱愛和對美的追求，並熱情注入到每一束花的創作過程中。</div>
-                </div>
-            </div>
-            <div class="brand01">
-                <img src="brand01.jpg" alt="">
-            </div>
+        <div class="intro-words">
+            <p> <span class="three-words">花朵 | 設計 | 巧思</span>
+                <br>
+                在繁忙的城市角落「BLOOM FLOWERS」以一片綠洲的姿態存在，<br>
+                自2008年開業以來，我們致力於為每一位顧客帶來自然之美的片刻慰藉，<br>
+                每一位花藝師擁有超過十年的花藝設計經驗，靈感來源於對自然無限的熱愛與對美的不懈追求，<br>
+                在這裡，不僅是購買花卉的場所，更是一個讓人放慢腳步，欣賞花卉之美的空間，<br>
+                我們相信，花卉不僅能裝飾空間，更能療癒心靈，<br>
+                每一朵精心挑選的花朵都承載著特別的意義，我們的任務是將這份美好通過花藝傳遞給每一位顧客。
+            </p>
         </div>
     </div>
-    <div class="section-two">
-        <div class="brand02">
-            <img src="brand02.jpg" alt="">
-        </div>
-        <div class="skin -color">
-            <div class="info-txt">無論是慶祝生日、紀念日，還是表達愛意和祝福，Bloom Flowers都能為您打造出令人難忘的花束和花藝裝飾，讓每個特殊時刻都充滿溫馨和美好。
-            </div>
-        </div>
+    <div class="line">——————</div>
+
+    <div class="describe">
+        <p>
+            當初在我們的介紹頁面上添加「不只是花店的花店」這句話時，我心中有些抵觸，<br>
+            我認為，作為一家專注於花草的店面，這樣的描述似乎稍顯矯情，因為在我看來，巧偶就是一家花店，<br>
+            然而，「不只是」代表跳出常規，超越一般的期望和認知，<br>
+            當時，我並不確定我們是否已經達到了這種水平，<br>
+            但隨著時間的推移，每當我在新朋友面前或在採訪中介紹我們的店鋪和所提供的服務時，<br>
+            我發現自己經常會覺得我們的業務範疇已經遠超傳統花店的定義，<br>
+            我們對這家店投注了極大的心血，這些年來的豐富經驗讓我逐漸接受了「不只是花店的花店」這個定義，<br>
+            這不僅是一種宣言，更是對我們用心經營的肯定。
+        </p>
     </div>
+    <!-- sliders -->
+    <div id="sliderBoard">
+		<ul id="content">
+			<li><img src="../pictures/shop.jpeg" class="image"></li>
+			<li><img src="../pictures/shop.jpeg" class="image"></li>
+			<li><img src="../pictures/shop.jpeg" class="image"></li>
+			<li><img src="../pictures/shop.jpeg" class="image"></li>
+			<li><img src="../pictures/shop.jpeg" class="image"></li>
+			<li><img src="../pictures/shop.jpeg" class="image"></li>
+			<li><img src="../pictures/shop.jpeg" class="image"></li>
+			<li><img src="../pictures/shop.jpeg" class="image"></li>
+			
+		</ul>
+		<ul id="contentButton">
+			<!-- <li class="clicked"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li> -->
+		</ul>
+	</div>
 </body>
 </html>

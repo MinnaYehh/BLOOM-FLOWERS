@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,   700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        font-family: poppins;
+        box-sizing: border-box;
+        }
+        article{
+        background: #f2f1ed;
+        color: #000000;
+        }
+        .wrapper{
+        padding: 10px 10%;
+        }
+        #card-area{
+        padding: 50px 0;
+        }
+        .box-area{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+        grid-gap: 20px;
+        margin-top: 50px;
+        align-items: start;
+        }
+        .box{
+        border-radius: 50px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 1px 1px 5px rgba(0 0,0, 0.5);
+        max-height: 300px;
+        }
+        .box img{
+        width: 100%;
+        border-radius: 10px;
+        display: block;
+        transition: transform  0.5s;
+        height: 300px;
+        object-fit: cover;
+        }
+        .overlay{
+        height: 0;
+        width: 100%;
+        background: linear-gradient(transparent, #F5F8F7 58%);
+        border-radius: 10px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 40px;
+        text-align: center;
+        font-size: 14px;
+        transition: height 0.5s;
+        }
+        .overlay h4{
+        font-weight: 600;
+        margin-bottom: 5px;
+        margin-top: 80%;
+        font-family: bebas neue;
+        font-size: 13px;
+        letter-spacing: 2px;
+        color: #00501b;
+        }
+        .overlay a{
+        margin-top: 25px;
+        color: black;
+        text-decoration: none;
+        font-size: 8px;
+        background: #fff173;
+        border-radius: 5px;
+        text-align: center;
+        padding: 5px 15px; 
+        }
+        .overlay p{
+        font-size: 12px;
+        }
+        .box:hover img{
+        transform: scale(1.1);
+        }
+        .box:hover .overlay{
+        height: 100%
+        }
+    </style>
+</head>
+<article>
+    <div id="card-area">
+        <h2>真摯的祝福，值得獻給最愛的人</h2>
+        <div class="wrapper">
+            <div class="box-area">
+                <div class="box">
+                    <img src="firstpage-1.jpg" alt="">
+                    <div class="overlay">
+                        <h4>我愛鬱金香 | 生日花束</h4>
+                        <p>為特別的日子打造讓心意綻放的美麗花束。</p>
+                    <a href="#">前往購物</a>
+                    </div>
+                </div>
+
+                <div class="box">
+                        <img src="firstpage-2.jpg" alt="">
+                <div class="overlay">
+                        <h4>媽媽我愛您 | 新鮮花束</h4>
+                        <p>為媽咪獻上精選鮮花，表達無盡的愛與感激。</p>
+                    <a href="#">前往購物</a>
+                </div>
+                </div>
+                <div class="box">
+                        <img src="firstpage-3.jpg" alt="">
+                        <div class="overlay">
+                        <h4>我們畢業啦! | 新鮮花束</h4>
+                        <p>用新鮮花束照亮新旅程、新起點。</p>
+                    <a href="#">前往購物</a>
+                </div>
+                </div>
+                <div class="box">
+                        <img src="firstpage-4.jpg" alt="">
+                        <div class="overlay">
+                        <h4>情人節 | 我愛你鮮花束</h4>
+                        <p>絕對是您打造浪漫氛圍的最佳幫手。</p>
+                    <a href="#">前往購物</a>
+                </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</article>
+</html>

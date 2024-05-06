@@ -11,9 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    
     <style>
 /* 導覽列 */
-            *{
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -25,13 +27,11 @@
             height: 65px;
             margin: 18px;
         }
-
         body {
             min-height: 100vh;
         }
-
         header {
-            position: sticky;
+            position: fixed;
             top: 0;
             left: 0;
             right: 0;
@@ -43,7 +43,6 @@
             justify-content: start;
             z-index: 1000;
             background-color: #F2F1ED;
-            width: 100%;
         }
 
         header .navbar ul {
@@ -57,11 +56,10 @@
 
         header .navbar ul li a {
             font-size: 18px;
-            padding: 10px;
+            padding: 20px;
             color: black;
             display: block;
             font-family: Noto Sans;
-            font-weight: 500;
         }
 
         header .navbar ul li a:hover {
@@ -99,6 +97,68 @@
             display: none;
         }
 
+        /* rwd navbar */
+        @media screen and (max-width:768px) {
+            header {
+                padding: 20px;
+            }
+
+            header label {
+                display: initial;
+            }
+
+            header .navbar {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #F3E9C4;
+                border-top: 1px solid #aaa;
+            }
+
+            header .navbar ul li {
+                width: 100%;
+            }
+
+            header .navbar ul li ul {
+                position: relative;
+                width: 100%;
+            }
+
+            header .navbar ul li ul li {
+                background: #fff;
+                border-top: 1px solid #aaa;
+            }
+
+            #menu-bar:checked~.navbar {
+                display: block;
+            }
+
+            .navbar {
+                display: none;
+            }
+            
+        }
+        /* rwd banner */
+        @media screen and (max-width:991px){
+
+            .banner img{
+            width: 100%;
+            }
+            .banner p strong{
+            font-size: 20px;
+            }
+            .banner .banner-location{
+            font-size: 16px;    
+            }
+            .box-area{
+                grid-template-columns:repeat(4, 1fr);
+            }
+            .box{
+                width: 100%;
+            }
+        
+        }
         .header-icon {
             margin-left: auto;
             list-style: none;
@@ -112,41 +172,32 @@
         }
 
         .icon-hb {
-            margin-left: 10px;
+            margin-left: 30px;
         }
 
         .search-box {
             display: none;
         }
-        /* .search-icon:hover .fa-magnifying-glass {
-        display: none;}  */
-         /* 隱藏放大鏡圖示 */
-   
+
         .search-icon:hover .search-box {
-            display: block;
-            width: 200px;
+            width: 10px;
             height: 30px;
             margin-right: 10px;
             border-radius: 5px;
             display: inline;
         }
-        .fa-caret-down{
-            margin: 10px;
-        }
+        /* <!--header--> */
 
-        /* banner */
         .banner img {
             width: 100%;
             height: 600px;
             margin: auto;
             display: block;
             align-items: center;
-            background-position: 70%;
-            background-size: cover;
         }
 
-        .banner p strong {
-            /* font-family: Alegreya Sans; */
+        .banner p {
+            font-family: Alegreya Sans;
             letter-spacing: 8px;
             font-size: 70px;
             position: absolute;
@@ -181,19 +232,19 @@
         }
 
         .card-area {
-            padding: 30px 0 30px;
+            padding: 30px 0;
         }
 
         .box-area {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            grid-gap: 30px;
+            grid-gap: 40px;
             margin-top: 50px;
-            align-items: start; 
+            align-items: start;
         }
 
         .box {
-            border-radius: 5px;
+            border-radius: 10px;
             position: relative;
             overflow: hidden;
             max-height: 300px;
@@ -284,7 +335,7 @@
         }
 
         .story-section-words p {
-            font-size: 14px;
+            font-size: 16px;
             color: #00501B;
             width: 100%;
             text-align: center;
@@ -325,7 +376,7 @@
         .promise-section {
             background-color: #EBE8E8;
             width: 100%;
-            height: auto;
+            height: 380px;
         }
 
         .promise-section .promise-section-list img {
@@ -336,24 +387,16 @@
         }
 
         .promise-section .promise-section-list img:hover {
-            /* transform: scale(1.1); */
-            opacity: 50%;
-            color: #545252;
+            transform: scale(1.1);
 
         }
 
         .promise-section .promise-section-list {
+            justify-content: center;
             display: flex;
             flex-direction: row;
-            justify-content: center;
         }
-        .promise-section .promise-section-list .radius-card .promise-slogan{
-            text-align: center;
-            color: #000000;
-        }
-        .promise-section .promise-section-list .radius-card{
-            margin: 10px 20px 10px;
-        }
+
         h3 {
             text-align: center;
             color: #000000;
@@ -369,7 +412,7 @@
         .bless-section {
             background-color: #f2f1ed;
             width: 100%;
-            height: auto;
+            height: 430px;
             margin-bottom: 0px;
         }
 
@@ -377,7 +420,6 @@
             display: flex;
             flex-direction: row;
             justify-content: center;
-            align-items: center;
         }
 
         .bless-section-card {
@@ -408,15 +450,13 @@
             bottom: 10px;
             left: 50%;
             transform: translateX(-50%);
-            background-color: #fff173;
+            background-color: rgb(235, 228, 18);
+            color: #fff;
             border:none;
             cursor: pointer;
             transition: background-color 0.3s;
             padding: 5px 10px 5px;
             margin-bottom: 50px;
-        }
-        .addToCart a{
-            color: #000000;
         }
         .bless-section-card:hover .addToCart {
         display: block;
@@ -443,6 +483,7 @@
             display: flex;
             justify-content: space-between;
             padding: 20px;
+
         }
 
         .footer-logo img {
@@ -489,11 +530,10 @@
         }
 
         .bottom p {
+            text-align: center;
             background-color: #F3E9C4;
             font-family: Noto Sans TC;
-            text-align: center;
         }
-        /* florist */
         .florist-section{
             width:100%;
             height: 280px;
@@ -503,7 +543,6 @@
             justify-content: center;
             align-items: center;
         }
-        
         .florist-one{
             width: 500px;
             height: 220px;
@@ -554,177 +593,14 @@
             width: 100%;
             background-color: #DDF2E7;
             margin-top: 20px;
-        } 
-        
-        /* rwd */
-        @media screen and (max-width:430px) {
-            header {
-                padding: 20px;
-                width: 100%;
-                position: sticky;
-            }
-
-            header label {
-                display: initial;
-            }
-
-            header .navbar {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: #F3E9C4;
-                border-top: 1px solid #aaa;
-            }
-
-            header .navbar ul li {
-                width: 100%;
-            }
-
-            header .navbar ul li ul {
-                position: relative;
-                width: 100%;
-            }
-
-            header .navbar ul li ul li {
-                background: #fff;
-                border-top: 1px solid #aaa;
-            }
-
-            #menu-bar:checked~.navbar {
-                display: block;
-            }
-            .search-icon:hover .search-box{
-                width: 100px;
-                height: 30px;
-            }
-            .navbar {
-                display: none;
-            }
-            /* banner */
-            .banner p strong{
-                font-size: 30px;
-                display: flex;
-                justify-content: center;
-                text-align: center;
-                color: #fff;
-                margin-left: 30px;
-                position: absolute;
-                top: 50%;
-                left: 3%;
-            }
-            .banner .banner-location{
-                display: none;
-            }
-            .banner img{
-                max-width: 100%;
-                height: auto;
-                object-fit: cover;
-            }
-            .box {
-                width: 100%;
-            }
-            h2{
-                font-size: 20px;
-                padding: 30px 0 10px;
-            }
-            .card-area .wrapper .box-area .box .overlay h4{
-            font-size: 9px;
-            }
-            .card-area .wrapper .box-area .box .overlay p{
-            font-size: 6px;
-            }
-            .card-area .wrapper .box-area .box .overlay a{
-            font-size: 6px;
-            padding: 3px 6px 3px;
-            }
-            .story-section .story-section-img-right img{
-            display: none;
-            }
-            .story-section .story-section-img-right{
-            display: none
-            }
-            .story-section .story-section-img-left img{
-            display: none;
-            }
-            .story-section .story-section-img-left{
-            display: none;
-            }
-            .promise-section .promise-section-list {
-                margin: 20px 0 0;
-                display: flex;
-                flex-direction:column;
-                justify-content: center;
-                align-items: center;
-            }
-            .story-section-words p{
-            width: 160%;
-            }
-            .bless-section .bless-section-list{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            }
-            .florist-list{
-            display: flex;
-            flex-direction: column;
-            margin-top: 20px;
-            height: auto;
-            }
-            .florist-one img, .florist-two img{
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-        
-            }
-            .florist-one, .florist-two{
-            width: 300px;
-            height: 400px;
-            background-color: #fff;
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            margin-left: 15px;
-            }
-            .florist-section{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            height: auto;
-            }
-            .florist-describe{
-                text-align: center;
-            }
-            .florist-part{
-                width: 50%;
-                margin-left: 40px;
-                margin-right: 35px; 
-            }
-            .florist-intro{
-                margin-left: 0px;
-            }
-            /* footer rwd */
-            .footer-logo img{
-            display: none;
-            }
-            .site-footer, .footer-info{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-            .footer-title{
-                display: none;
-            }
-            .footer-info{
-                margin: 10px 0 10px;
-            }
         }
+        
     </style>
 </head>
+<body>
 <header>
+
+    
     <div class="logo">
         <a href="#"><img src="logo.png"></a>
     </div>
@@ -732,19 +608,19 @@
     <!-- <label for="menu-bar">me</label> -->
     <nav class="navbar">
         <ul>
-            <li><a href="#">關於我們<i class="fas fa-caret-down"></i></a>
+            <li><a href="#">關於我們</a>
                 <ul>
                     <li><a href="#">花語故事</a></li>
                     <li><a href="#">品牌故事</a></li>
                 </ul>
             </li>
-            <li><a href="#">花禮分類<i class="fas fa-caret-down"></i></a>
+            <li><a href="#">花禮分類</a>
                 <ul>
                     <li><a href="#">鮮花束</a></li>
                     <li><a href="#">鮮花花盆</a></li>
                 </ul>
             </li>
-            <li><a href="#">送花推薦<i class="fas fa-caret-down"></i></a>
+            <li><a href="#">送花推薦</a>
                 <ul>
                     <li><a href="#">生日花束</a></li>
                     <li><a href="#">畢業花束</a></li>
@@ -752,13 +628,13 @@
                     <li><a href="#">情人節花束</a></li>
                 </ul>
             </li>
-            <li><a href="#">最新消息<i class="fas fa-caret-down"></i></a>
+            <li><a href="#">最新消息</a>
                 <ul>
                     <li><a href="#">活動推薦</a></li>
                     <li><a href="#">得獎紀錄</a></li>
                 </ul>
             </li>
-            <li><a href="#">婚禮系列<i class="fas fa-caret-down"></i></a>
+            <li><a href="#">婚禮系列</a>
                 <ul>
                     <li><a href="#">胸花系列</a></li>
                     <li><a href="#">捧花系列</a></li>
@@ -785,8 +661,8 @@
         </li>
     </ul>
 </header>
-
-    <div class="banner" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
+<!-- banner -->
+    <div class="banner">
         <img src="pictures/banner.jpg" alt="">
         <p><strong>
                 BLOOM<br>
@@ -797,11 +673,11 @@
 
 <section>
     <div class="card-area">
-        <h2>讓愛綻放 | 為每個特別時刻挑選專屬的花束！</h2>
+        <h2>讓愛綻放 | 為特別時刻挑選專屬的花束！</h2>
         <div class="wrapper">
             <div class="box-area">
                 <div class="box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
-                    <img src="pictures/firstpage-3.jpg" alt="">
+                    <img src="pictures/firstpage-1.jpg" alt="">
                     <div class="overlay">
                         <h4>我愛鬱金香 | 生日花束</h4>
                         <p>在壽星一年一度的特別日子裡，給予最真摯的祝福。</p>
@@ -810,14 +686,13 @@
                 </div>
 
                 <div class="box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
-                    <img src="pictures/firstpage-4.jpg" alt="">
+                    <img src="pictures/firstpage-2.jpg" alt="">
                     <div class="overlay">
-                        <h4>我愛鬱金香 | 生日花束</h4>
-                        <p>在壽星一年一度的特別日子裡，給予最真摯的祝福。</p>
+                        <h4>媽媽我愛您 | 新鮮花束</h4>
+                        <p>為媽咪獻上精選鮮花，表達無盡的愛與感激。</p>
                         <a href="#">前往購物</a>
                     </div>
                 </div>
-
                 <div class="box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
                     <img src="pictures/firstpage-3.jpg" alt="">
                     <div class="overlay">
@@ -840,8 +715,7 @@
     </div>
 </section>
 
-<section class="story-section" data-aos="fade-up"
-data-aos-anchor-placement="top-center" data-aos-duration="1000">
+<section class="story-section">
     <div class="story-section-img-left">
         <img src="pictures/vase-01.jpg" alt="">
     </div>
@@ -866,69 +740,65 @@ data-aos-anchor-placement="top-center" data-aos-duration="1000">
     <div class="promise-section-list">
         <div class="radius-card">
             <img src="pictures/promise01.png" alt="">
-            <h3 class="promise-slogan"><span class="highlight">01.</span>七天內不滿意無條件退款</h3>
+            <h3><span class="highlight">01.</span>七天內不滿意無條件退款</h3>
         </div>
         <div class="radius-card">
             <img src="pictures/promise02.png" alt="">
-            <h3 class="promise-slogan"><span class="highlight">02.</span>新鮮直送</h3>
+            <h3><span class="highlight">02.</span>新鮮直送</h3>
         </div>
         <div class="radius-card">
             <img src="pictures/promise03.png" alt="">
-            <h3 class="promise-slogan"><span class="highlight">03.</span>100%純手工製作</h3>
+            <h3><span class="highlight">03.</span>100%純手工製作</h3>
         </div>
     </div>
 </section>
-<!-- effect -->
-<section class="bless" data-aos="zoom in" data-aos-easing="linear" data-aos-duration="1000">
 <section class="bless-section">
     <h2>小小心意 | 滿滿祝福</h2>
     <p class="promise-word">一朵花，訴說著對你的思念。</p>
     <div class="bless-section-list">
         <div class="bless-section-card">
             <img src="pictures/bless-01.jpg" alt="">
-            <button class="addToCart"><a href="#">我要購買</a></button>
+            <button class="addToCart">我要購買</button>
             <span class="bless-highlight">優雅紫鬱金香
             </span>
 
         </div>
         <div class="bless-section-card">
             <img src="pictures/bless-02.jpg" alt="">
-            <button class="addToCart"><a href="#">我要購買</a></button>
+            <button class="addToCart">我要購買</button>
             <span class="bless-highlight">耀眼玫瑰
             </span>
         
         </div>
         <div class="bless-section-card">
             <img src="pictures/bless-03.jpg" alt="">
-            <button class="addToCart"><a href="#">我要購買</a></button>
+            <button class="addToCart">我要購買</button>
             <span class="bless-highlight">活力鬱金香</span>
             
         </div>
     </div>
 </section>
 
-
-<section class="bless-section" data-aos="zoom in" data-aos-easing="linear" data-aos-duration="1000">
+<section class="bless-section">
     <div class="bless-section-list">
         <div class="bless-section-card">
             <img src="pictures/bless-04.jpg" alt="">
-            <button class="addToCart"><a href="#">我要購買</a></button>
+            <button class="addToCart">我要購買</button>
             <span class="bless-highlight">陽光黃鬱金香</span>
             
         </div>
         <div class="bless-section-card">
             <img src="pictures/bless-05.jpg" alt="">
-            <button class="addToCart"><a href="#">我要購買</a></button>
+            <button class="addToCart">我要購買</button>
             <span class="bless-highlight">高雅鬱金香</span>
             
         </div>
         <div class="bless-section-card">
             <img src="pictures/bless-06.jpg" alt="">
-            <button class="addToCart"><a href="#">我要購買</a></button>
+            <button class="addToCart">我要購買</button>
             <span class="bless-highlight">低調鬱金香</span>
         </div>
     </div>
-</section>
 </section>
 
 <!-- 花藝師介紹 -->
@@ -995,11 +865,10 @@ data-aos-anchor-placement="top-center" data-aos-duration="1000">
         <a href="#"><i class="fa-brands fa-instagram"></i></a>
         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
 </section>
 
 <span class="bottom">
-    <p>本網站為緯育TibaMe前端工程師班第90期學員專題作品，本平台僅供學習、展示之用。</p>
+    <p>©2024 BLOOMFLOWERS.all rights reserved.</p>
 </span>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
@@ -1013,4 +882,5 @@ data-aos-anchor-placement="top-center" data-aos-duration="1000">
     });
     
 </script>
+</body>
 </html>

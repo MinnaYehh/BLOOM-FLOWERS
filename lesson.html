@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recommend lesson</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #f2f1ed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            z-index: 5;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            } 
+            .top img {
+            width: 70px;
+            height: 70px;
+            margin: 10px;
+        }
+        .top {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .header-list{
+            display: flex;
+            flex-grow: 1;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }.header-list li {
+            font-size: 18px;
+            margin: auto;
+            position: relative;
+            font-family: Noto Sans TC;
+            padding: 20px;
+        }
+        .header-list li:hover {
+            background-color: #78bc8e;
+        }
+
+        .header-list li:hover a {
+            color: #f5f8f7;
+        }
+
+        .header-list li a {
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+        }
+        .fa-solid {
+            font-weight: 900;
+            color: black;
+        }
+        .header-icon {
+            display: flex;
+            padding-right: 50px;
+            margin: auto;
+            list-style: none;
+            align-content: center;
+        }
+        .header-icon li {
+            font-style: 24px;
+            margin-left: 10px;
+        }
+    .flower-section-one{
+    display: flex;
+    justify-content: center;
+    }
+    .flower-section-one img{
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    
+    }
+    .flower-section-two{
+    display: flex;
+    justify-content: center;
+    }
+    .flower-section-two img{
+    width: 310px;
+    height: 300px;
+    margin: 10px;
+    }
+    h2{
+    font-family: Noto Sans TC;
+    font-size: 28px;
+    text-align: center;
+    letter-spacing: 5px;
+    }
+    h3{
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    }
+    .words{
+    text-align: center;
+
+    }
+    .flower-course-title{
+    text-align: center;
+    font-size: 20px;
+    color: #6C6C6C;
+    letter-spacing: 5px;
+    }
+    .flower-course-intro{
+    text-align: center;
+    margin-top: 20px;
+    margin: 15px;
+    line-height: 2;
+    letter-spacing: 2px;
+    font-family: Noto Serif TC;
+    }
+    .flower-course-intro p{
+    font-family: Noto Sans TC;
+    font-size: 16px;
+    }
+    .flower-course{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    .purple{
+    width: 430px;
+    height: 10px;
+    background-color:#D3B3E3;
+    }
+    .flower-course-list{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 150px;
+    }
+
+    .flower-course-list-title{
+    font-size: 30px;
+    font-family: Noto Sans TC;
+    letter-spacing: 2px;
+    border-bottom:1px solid black;
+    display: inline-block;
+    color: #6C6C6C;
+    margin: 10px 0px 10px;
+    padding-right: 100px;
+    max-width: 180px;
+    }
+
+    .flower-course-txt{
+    margin-bottom: 15px;
+    }
+    .flower-course-txt p{
+    font-family: Noto Sans TC;
+    font-size: 13px;
+    color: #6C6C6C;
+    letter-spacing: 3px;
+    line-height: 1.5;
+    }
+    .flower-course-list img{
+    width: 100%;
+    height: 305px;
+    }
+
+    .flower-course-list .flower-course-info{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 30px;
+    }
+    .flower-course-list .flower-course-info .color{
+    width: 380px;
+    height: 230px;
+    background-color: #F2F1ED;
+    }
+    .activity img{
+    width: 100%;
+    }
+    .btn{
+        padding: 5px 10px; 
+        background-color: #7BA666; 
+        color: #ffffff; 
+        border: none; 
+        border-radius: 5px; 
+        font-family: 'Alegreya Sans', sans-serif;
+        font-size: 8px;
+        cursor: pointer; 
+        transition: background-color 0.3s; 
+        text-align: center;
+        letter-spacing: 2px;
+        display: inline;
+        max-width: 80px;
+        }
+        /* footer */
+        .site-footer{
+        height: 100px;
+        background-color: #F3E9C4;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+
+        }
+        .footer-logo img{
+        height: 100px;
+        width: 100px;
+        }
+        .footer-title{
+        font-size: 14px;
+        font-family: Noto Sans TC;
+        border-bottom: 2px solid black;
+        display: inline;
+        font-weight: 500;
+        }
+        p{
+        font-size: 12px;
+        font-family: Noto Sans TC;
+        }
+
+        .footer-info{
+        padding-top: 15px;
+        }
+
+        .footer-info a{
+        text-decoration: none;
+        color: #000;
+        display: block;
+        font-size: 12px;
+        }
+        .social-media{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        .social-media a{
+        margin: 0px 5px 0px;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        }
+        .bottom p{
+        text-align: center;
+        background-color: #F3E9C4;
+        font-family: Noto Sans TC;
+        }
+    </style>
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        <div class="top">
+            <a href="index.html"><img src="logo.png" alt="header-logo"></a>
+            <ul class="header-list">
+                <li><a href="#">關於我們</a></li>
+                <li><a href="#">花禮分類</a></li>
+                <li><a href="project-02.html">送花推薦</a></li>
+                <li><a href="project-04.html">最新消息</a></li>
+                <li><a href="#">婚禮系列</a></li>
+            </ul>
+            <ul class="header-icon">
+                <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="flower-course">
+        <div class="flower-course-title"><h3>花藝體驗課程 | 全面招生中!</h3></div>
+        <div class="purple"></div>
+        <div class="flower-course-intro">
+            <p class="words">
+            感受花朵的美麗和生命力，是一種獨特的體驗。<br>
+            無論您是想要探索新的愛好，還是想要提升您的花藝技能<br>
+            BLOOM FLOWERS的花藝設計課程將為您提供美好的學習旅程。<br>
+            
+            讓您與大自然和藝術相融合。<br>
+            加入我們，與我們一起開啟一段美妙的花藝之旅吧！</div></p>
+    </section>
+    <section class="flower-course-list">
+        <div class="activity">
+        <img src="pictures/activity-01.jpg" alt="">
+        </div>
+        <div class="flower-course-info">
+        <div class="flower-course-list-title">插花課程</div>
+        <div class="color">
+            <div class="flower-course-txt">
+                <p>如果您喜歡家中，<br>
+                有不一樣的花兒擺設，<br>
+                如果您對花藝有興趣，卻不知從何接觸起，<br>
+                歡迎大人小孩加入此課程。<br>
+                上課時間：<br>
+                週六 - 18:00-20:00<br>
+                週日 - 18:30-20:30<br>
+                每班至多6人<br>
+                學費:1000元/堂<br>
+                (已包含材料費、授課費用)</p>
+                </div><button class="btn">點我報名</button>
+            </div>
+        </div>
+        
+    </section>
+    <section class="flower-course-list">
+        <div class="activity">
+        <img src="pictures/activity-02.jpg">
+        </div>
+        <div class="flower-course-info">
+        <div class="flower-course-list-title">花藝課程</div>
+        <div class="color">
+            <div class="flower-course-txt">
+                <p>如果您喜歡家中，<br>
+                有不一樣的花兒擺設，<br>
+                如果您對花藝有興趣，卻不知從何接觸起，<br>
+                歡迎大人小孩加入此課程。<br>
+                上課時間：<br>
+                週六 - 18:00-20:00<br>
+                週日 - 18:30-20:30<br>
+                每班至多6人<br>
+                學費:1000元/堂<br>
+                (已包含材料費、授課費用)</p>
+            </div>
+            
+        
+        <button class="btn">點我逛逛</button></div>
+        </div>
+    </section>
+    <section class="site-footer">
+        <div class="footer-logo">
+            <img src="logo.png" alt="BLOOM FLOWERS">
+        </div>
+        <div class="footer-contact">
+            <p class="footer-title">聯絡我們</p>
+            <div class="footer-info">
+            <p>電話: 03-1234 5678</p>
+            <p>地址:桃園市中壢區復興路46號</p>
+            <p>營業時間:週二至週日10:00-22:30</p>
+            <p>連絡信箱:bloomflowers@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-about">
+            <p class="footer-title">關於我們</p>
+            <div class="footer-info">
+            <a href="#">品牌故事</a>
+            <a href="project-03.html">花語故事</a>
+            </div>
+        </div>
+        <div class="social-media">
+            <a href="#"><i class="fa-brands fa-google"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+    </section>
+    <div class="bottom">
+        <p>©2024 BLOOMFLOWERS.ALL RIGHTS RESERVED</p>
+    </div>
+</body>
+</html>

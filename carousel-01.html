@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carosel</title>
+    <style>
+    .owl-theme .item img{
+    height: 250px;
+    padding: 3px;
+    width: 300px;
+    }
+
+    .owl-carousel .item {
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.4375rem;
+    margin-top: 0rem;
+    }
+    </style>
+</head>
+<body>
+    <!-- owl.carousel -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+</link>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</link>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<div class="owl-carousel owl-theme">
+  <div class="item">
+    <img src="pictures/brandstory01.jpg" alt="">
+  </div>
+  <div class="item">
+    <img src="pictures/brandstory02.jpg" alt="">
+  </div>
+  <div class="item">
+    <img src="pictures/brandstory03.jpg" alt="">
+  </div>
+  <div class="item">
+    <img src="pictures/brandstory03.jpg" alt="">
+  </div>
+  <div class="item">
+    <img src="pictures/brandstory02.jpg" alt="">
+  </div>
+  <div class="item">
+    <img src="pictures/bless04.png" alt="">
+  </div>
+</div>
+
+<script>
+    $(".owl-carousel").owlCarousel({
+  loop: true, // 循環播放
+  margin: 10, // 外距 10px
+  nav: true, // 顯示點點
+  responsive: {
+    0: {
+      items: 1 // 螢幕大小為 0~600 顯示 1 個項目
+    },
+    600: {
+      items: 3 // 螢幕大小為 600~1000 顯示 3 個項目
+    },
+    1000: {
+      items: 5 // 螢幕大小為 1000 以上 顯示 5 個項目
+    }
+  }
+});
+</script>
+</body>
+</html>

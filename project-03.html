@@ -3,115 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Flower-Story</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
 
     <style>
-        *{
+       *{
             margin: 0;
             padding: 0;
-        } 
-        .header {
-            background-color: #f2f1ed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            z-index: 5;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            } 
-            .top img {
-            width: 70px;
-            height: 70px;
-            margin: 10px;
-        }
-        .top {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-        }
-        .header-list{
-            display: flex;
-            flex-grow: 1;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            align-items: center;
-        }.header-list li {
-            font-size: 18px;
-            margin: auto;
-            position: relative;
-            font-family: Noto Sans TC;
-            padding: 20px;
-        }
-        .header-list li:hover {
-            background-color: #78bc8e;
-        }
-
-        .header-list li:hover a {
-            color: #f5f8f7;
-        }
-
-        .header-list li a {
+            box-sizing: border-box;
+            text-transform: capitalize;
             text-decoration: none;
-            color: black;
-            font-weight: 500;
         }
-        .fa-solid {
-            font-weight: 900;
+
+        .logo img {
+            width: 65px;
+            height: 65px;
+            margin: 18px;
+        }
+
+        body {
+            min-height: 100vh;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 110px;
+            box-shadow: 0 5px 10px rgba(0 0, 0, .1);
+            padding: 0px 7px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            z-index: 1000;
+            background-color: #F2F1ED;
+        }
+
+        header .navbar ul {
+            list-style: none;
+        }
+
+        header .navbar ul li {
+            position: relative;
+            float: left;
+        }
+
+        header .navbar ul li a {
+            font-size: 18px;
+            padding: 20px;
             color: black;
+            display: block;
+            font-family: Noto Sans;
+        }
+
+        header .navbar ul li a:hover {
+            color: green;
+
+        }
+
+        header .navbar ul li ul {
+            position: absolute;
+            left: 0;
+            width: 200px;
+            background-color: #F3E9C4;
+            ;
+            display: none;
+        }
+
+        header .navbar ul li ul li {
+            width: 100%;
+
+        }
+
+        header .navbar ul li:focus-within>ul,
+        header .navbar ul li:hover>ul {
+            display: initial;
+        }
+
+        #menu-bar {
+            display: none;
+        }
+
+        header label {
+            font-size: 20px;
+            color: #333;
+            cursor: pointer;
+            display: none;
         }
         .header-icon {
-            display: flex;
-            padding-right: 50px;
-            margin: auto;
+            margin-left: auto;
             list-style: none;
-            align-content: center;
+            display: flex;
+            align-items: flex-end;
         }
-        .header-icon li {
-            font-style: 24px;
+
+        .fa-solid {
+            color: black;
+            margin: 14px;
+        }
+
+        .icon-hb {
             margin-left: 10px;
         }
-    .flower-section-one{
-    display: flex;
-    justify-content: center;
-    }
-    .flower-section-one img{
-    width: 200px;
-    height: 300px;
-    margin: 10px;
-    
-    }
-    .flower-section-two{
-    display: flex;
-    justify-content: center;
-    }
-    .flower-section-two img{
-    width: 310px;
-    height: 300px;
-    margin: 10px;
-    }
-    h2{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #00501b;
-    }
-    h4{
-    text-align: center;
-    letter-spacing: 2px;
-    }
-    .txt{
-    margin: 15px;
-    line-height: 3.5;
-    }
+
+        .search-box {
+            display: none;
+        }
+
+        .search-icon:hover .search-box {
+            width: 200px;
+            height: 30px;
+            margin-right: 10px;
+            border-radius: 5px;
+            display: inline;
+        }
+        /* mian-block */
+        .main-block{
+            width: 90%;
+            height: 280px;
+            margin: 150px 50px 0;
+            /* border: 2px solid #aaa; */
+        }
+        .flower-story-title{
+            font-size: 24px;
+            display: flex;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            padding: 30px 0;
+            color: black;
+            margin-bottom: 40px;
+        }
+        .main-block img{
+            width: 60px;
+            height: 60px;
+            display: block;
+            margin: 10px auto 10px;
+        }
+        .main-block-word{
+            margin: 20px 120px 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: Noto Sans TC;
+        }
+        /* card */
+        .title-pink{
+        width: 90%;
+        height: 60px;
+        background-color: #F1C4E1;
+        color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 30px;
+        margin-left: 60px;
+        }
+        .title-blue{
+        width: 90%;
+        height: 60px;
+        background-color: #BFD1D3;
+        color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 30px;
+        margin-left: 60px;
+        }
+        .info-card{
+        display: flex;
+        }
+        .intro-card{
+        margin: 30px 0 30px;
+        }
+        .large{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        }
+        .large img{
+        width: 400px;
+        height: 500px;
+        }
+        .words{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        }
+        .more-imgs img{
+        width: 130px;
+        height: 130px;
+        margin: 20px;
+        }
+        .more-imgs{
+        display: flex;
+        flex-direction: row;  
+        justify-content: center;
+        }
+        h3{
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+            color: green;
+        }
+        h6{
+            font-size: 15px;
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+            line-height: 30px;
+        }
     /* footer */
     .site-footer{
-        width: 1223px;
-        height: 100px;
-        background-color: #9cb2a3;
+        width: 100%;
+        background-color: #F3E9C4;
         display: flex;
         justify-content: space-between;
         padding: 20px;
@@ -154,65 +269,202 @@
         color: black;
         }
         .bottom p{
+        width: 100%;
         text-align: center;
-        background-color: #9cb2a3;
+        background-color: #F3E9C4;
         font-family: Noto Sans TC;
-        padding: 10px auto;
-        font-size: 10px;
         }
         #info{
         display: flex;
         justify-self: start;
         }
+         /* rwd */
+        @media screen and (max-width:991px) {
+            header {
+                padding: 20px;
+                width: 100%;
+                position: sticky;
+            }
 
+            header label {
+                display: initial;
+            }
+
+            header .navbar {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #F3E9C4;
+                border-top: 1px solid #aaa;
+            }
+
+            header .navbar ul li {
+                width: 100%;
+            }
+
+            header .navbar ul li ul {
+                position: relative;
+                width: 100%;
+            }
+
+            header .navbar ul li ul li {
+                background: #fff;
+                border-top: 1px solid #aaa;
+            }
+
+            #menu-bar:checked~.navbar {
+                display: block;
+            }
+            .search-icon:hover .search-box{
+                width: 100px;
+                height: 30px;
+            }
+            .navbar {
+                display: none;
+            }
+            /* banner */
+            .banner p strong{
+                font-size: 30px;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                color: #fff;
+                margin-left: 30px;
+                position: absolute;
+                top: 50%;
+                left: 3%;
+            }
+            .banner .banner-location{
+                display: none;
+            }
+        }
     </style>
 </head>
+
+<!-- navbar -->
 <body>
-    <!-- header -->
-    <header class="header">
-        <div class="top">
-            <a href="#"><img src="logo.png" alt="header-logo"></a>
-            <ul class="header-list">
-                <li><a href="#">關於我們</a></li>
-                <li><a href="#">花禮分類</a></li>
-                <li><a href="#">送花推薦</a></li>
-                <li><a href="#">最新消息</a></li>
-                <li><a href="#">婚禮系列</a></li>
-            </ul>
-            <ul class="header-icon">
-                <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
-                <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            </ul>
+    <header>
+        <div class="logo">
+            <a href="#"><img src="logo.png"></a>
         </div>
-    </header>
-<!-- picture -->
-<h2>花語故事 | 花語傳情</h2>
-<div class="flower-section-one">
-    <img src="story03.jpg" alt="">
-    <img src="story01.jpg" alt="">
-    <img src="story05.jpg" alt="">
-</div>
-<div class="flower-section-two">
-    <img src="story02.jpg" alt="">
-    <img src="story04.jpg" alt="">
-</div>
-<div class="txt">
-        <h4>橙色鬱金香 - 我最熱情!</h4>
-        <p> 花語代表熱情、勇氣，還有希望。</p>
-        
-        <h4>粉色鬱金香 - 我最幸福！</h4>
-        <p>花語代表美人、熱愛、幸福。</p>
-        
-        <h4>紅色鬱金香 - 熱情的愛、我愛你！</h4>
-        <p>直截了當地表達著我愛你，紅色象徵著熱情、奮不顧身，熱戀中的情人可以彼此贈送紅色鬱金香。</p>
-        
-        <h4>黑色鬱金香 - 神秘、珍貴！</h4>
-        <p>因為數量較為稀少，花語代表著神秘、珍貴。</p>
+        <input type="checkbox" id="menu-bar">
+        <!-- <label for="menu-bar">me</label> -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">關於我們</a>
+                    <ul>
+                        <li><a href="#">花語故事</a></li>
+                        <li><a href="#">品牌故事</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">花禮分類</a>
+                    <ul>
+                        <li><a href="#">鮮花束</a></li>
+                        <li><a href="#">鮮花花盆</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">送花推薦</a>
+                    <ul>
+                        <li><a href="#">生日花束</a></li>
+                        <li><a href="#">畢業花束</a></li>
+                        <li><a href="#">母親節花束</a></li>
+                        <li><a href="#">情人節花束</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">最新消息</a>
+                    <ul>
+                        <li><a href="#">活動推薦</a></li>
+                        <li><a href="#">得獎紀錄</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">婚禮系列</a>
+                    <ul>
+                        <li><a href="#">胸花系列</a></li>
+                        <li><a href="#">捧花系列</a></li>
+                        <li><a href="#">客製化花圈</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
     
-        <h4>粉色鬱金香花語 - 浪漫、永恆的愛、戀人的愛戀!</h4>
-        <p>浪漫、永恆的愛、戀人的愛戀等意義。送給心愛的人粉紅色鬱金香，能祝福你們甜蜜、幸福的感情。</p>
-</div>
+        <ul class="header-icon">
+    
+    
+            <!-- <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li> -->
+            <li class="search-icon">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <input type="text" placeholder="Search..." class="search-box" style="color: black;">
+            </li>
+    
+            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+    
+            <li class="icon-hb">
+                <a href="#">
+                    <label for="menu-bar"><label for="menu-bar" class="icon-hb"></label>
+                        <i class="fa-solid fa-bars"></i>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <!-- mian-block-->
+    <div class="main-block">
+        <h2 class="flower-story-title">花語故事</h2>
+        <img src="pictures/main-block-icon.png" alt="">
+        <div class="main-block-word">每朵花都承載著特殊的意義和深遠的情感。<br>
+            探索花語故事，了解這些美麗花卉如何默默傳達人們的愛、希望與祝福。
+        </div>
+    </div>
+    <div class="intro-card">
+        <h2 class="title-pink">鬱金香</h2>
+        <div class="info-card">
+            <div class="large">
+                <img src="pictures/story05.jpg" alt="">
+            </div>
+            <div class="words">
+                <div class="intro">
+                    <h3>簡介</h3>
+                    <h6>"在17世紀的荷蘭，鬱金香曾引發一場名為「鬱金香狂熱」的經濟泡沫。這些花不僅是美麗的象徵，也成了財富和地位的象徵。今天，鬱金香依舊被視為愛情和春天的使者，其優雅的姿態與豐富的色彩，繼續在全球花卉市場上佔有一席之地。"</h6>
+                </div>
+                <div class="meaning">
+                    <h3>意義</h3>
+                    <h6>鬱金香，象徵著完美的愛與高貴，各色鬱金香也有其特殊含義：紅色代表真摯的愛情和勇氣；黃色象徵歡樂和陽光，傳遞著溫暖與樂觀；紫色則是宮廷般的尊貴和神秘。這些多彩的鬱金香不僅美化了環境，也豐富了人們的情感表達。</h6>
+                </div>
+            <div class="more-imgs">
+                <img src="pictures/story01.jpg" alt="">
+                <img src="pictures/story03.jpg" alt="">
+                <img src="pictures/story04.jpg" alt="">
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- part two -->
+    <div class="intro-card">
+        <h2 class="title-blue">玫瑰花</h2>
+        <div class="info-card">
+            <div class="large">
+                <img src="pictures/vase.jpg" alt="">
+            </div>
+            <div class="words">
+                <div class="intro">
+                    <h3>簡介</h3>
+                    <h6>"玫瑰，象徵愛情與熱情的經典花卉，自古以來便是愛神維納斯的代表。據說，在一次拯救她心愛的愛迪斯時，維納斯不慎被荊棘劃傷，她的血滴在白玫瑰上，將之染成深紅，此後紅玫瑰便成了犧牲與真摯愛情的象徵。"</h6>
+                </div>
+                <div class="meaning">
+                    <h3>意義</h3>
+                    <h6>玫瑰花，象徵著愛情與欣賞的美好。不同的顏色代表著不同的含義：紅玫瑰代表熱烈的愛情與深切的情感，粉紅玫瑰表達著溫柔的愛與感激之情，黃玫瑰則象徵友誼與快樂，白玫瑰象徵純潔和尊敬，而藍玫瑰則是對不可能或渴望達成的願望的象徵。</h6>
+                </div>
+            <div class="more-imgs">
+                <img src="pictures/brandstory03.jpg" alt="">
+                <img src="pictures/bless-05.jpg" alt="">
+                <img src="pictures/mom-04.jpg" alt="">
+            </div>
+            </div>
+        </div>
+    </div>
+<!-- footer -->
 <section class="site-footer">
     <div class="footer-logo">
         <img src="logo.png" alt="BLOOM FLOWERS">
@@ -230,7 +482,7 @@
         <p class="footer-title">關於我們</p>
         <div class="footer-info">
             <span><a href="#">品牌故事</a></span>
-            <span><a href="#">花語故事</a></span>
+            <span><a href="project-03.html">花語故事</a></span>
         </div>
     </div>
     <div class="social-media">
@@ -239,8 +491,8 @@
         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
     </div>
 </section>
-<div class="bottom">
-        <p>©2024 BLOOMFLOWERS.ALL RIGHTS RESERVED</p>
+    <div class="bottom">
+        <p>©2024 BLOOMFLOWERS.all rights reserved.</p>
     </div>
 </body>
 </html>
