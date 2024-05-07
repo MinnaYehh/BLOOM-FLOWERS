@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
        *{
             margin: 0;
@@ -322,7 +322,7 @@
             .search-icon:hover .search-box{
                 width: 100px;
                 height: 30px;
-            }
+            } 
             .navbar {
                 display: none;
             }
@@ -432,10 +432,7 @@
                 </li>
             </ul>
         </nav>
-    
         <ul class="header-icon">
-    
-    
             <!-- <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li> -->
             <li class="search-icon">
                 <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
@@ -455,14 +452,14 @@
     </header>
 
     <!-- mian-block-->
-    <div class="main-block">
+    <div class="main-block"data-aos="fade-in" data-aos-easing="linear" data-aos-duration="1000">
         <h2 class="flower-story-title">花語故事</h2>
         <img src="pictures/main-block-icon.png" alt="">
         <div class="main-block-word">每朵花都承載著特殊的意義和深遠的情感。<br>
             探索花語故事，了解這些美麗花卉如何默默傳達人們的愛、希望與祝福。
         </div>
     </div>
-    <div class="intro-card">
+    <div class="intro-card" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000">
         <h2 class="title-pink">鬱金香</h2>
         <div class="info-card">
             <div class="large">
@@ -486,7 +483,7 @@
         </div>
     </div>
     <!-- part two -->
-    <div class="intro-card">
+    <div class="intro-card" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000">
         <h2 class="title-blue">玫瑰花</h2>
         <div class="info-card">
             <div class="large">
@@ -539,5 +536,17 @@
     <div class="bottom">
         <p>本網站為緯育TibaMe前端工程師班第90期學員專題作品，本平台僅供學習、展示之用。</p>
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+    offset: 200, // 觸發動畫前的滾動距離（像素）
+    duration: 600, // 動畫持續時間（毫秒）
+    easing: 'ease-in-sine', // 動畫的緩動曲線
+    delay: 100, // 動畫開始的延遲時間（毫秒）
+    once: false, // 是否只顯示一次動畫
+    mirror: false, // 是否應該在滾動時動畫元素出現在視圖中    
+    });
+    
+</script>
 </body>
 </html>

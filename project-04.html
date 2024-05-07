@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson-2(new)</title>
+    <title>Lessons</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <style>
         *{
             margin: 0;
@@ -380,6 +382,23 @@
             .date{
                 justify-content: center;
             }
+            /* rwd footer */
+            .footer-logo img{
+            display: none;
+            }
+            .site-footer, .footer-info{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .footer-title{
+                display: none;
+            }
+            .footer-info{
+                margin: 10px 0 10px;
+            }
+
         }
     </style>
 </head>
@@ -453,7 +472,7 @@
         <h3 class="courses-title">COURSES<br>課程推薦</h3>
     </div>
     <!-- part1 -->
-    <section class="flower-course">
+    <section class="flower-course" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000">
         <div class="big-left">
             <div class="big-flower">
                     <img id="large-01" src="pictures/lesson-01.jpg">
@@ -483,7 +502,7 @@
     </section>
 <hr>
     <!-- part2 -->
-    <section class="flower-course">
+    <section class="flower-course"data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000">
         <div class="big-left">
                 <div class="big-flower">
                 <img id="large-02" src="pictures/lesson2-06.jpg">
@@ -565,6 +584,18 @@
     <span class="bottom">
         <p>本網站為緯育TibaMe前端工程師班第90期學員專題作品，本平台僅供學習、展示之用。</p>
     </span>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+        offset: 200, // 觸發動畫前的滾動距離（像素）
+        duration: 600, // 動畫持續時間（毫秒）
+        easing: 'ease-in-sine', // 動畫的緩動曲線
+        delay: 100, // 動畫開始的延遲時間（毫秒）
+        once: false, // 是否只顯示一次動畫
+        mirror: false, // 是否應該在滾動時動畫元素出現在視圖中    
+        });
+        
+    </script>
 </body>
 
 </html>
