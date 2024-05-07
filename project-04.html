@@ -8,187 +8,127 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <style>
-        * {
+        *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            /* font-family: Noto Sans TC; */
+            text-transform: capitalize;
+            text-decoration: none;
         }
-
-        .menu-bar {
-            background-color: #F2F1ED;
-            height: 100px;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-            position: fixed;
-            box-shadow: 1px 1px 1px rgba(0 0, 0, 0.5);
-            z-index: 1;
-        }
-
         .logo img {
-            width: 60px;
-            height: 60px;
+            width: 65px;
+            height: 65px;
+            margin: 18px;
         }
 
-        .menu-bar ul {
+        body {
+            min-height: 100vh;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 110px;
+            box-shadow: 0 5px 10px rgba(0 0, 0, .1);
+            padding: 0px 7px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            z-index: 1000;
+            background-color: #F2F1ED;
+            width: 100%;
+        }
+
+        header .navbar ul {
+            list-style: none;
+        }
+
+        header .navbar ul li {
+            position: relative;
+            float: left;
+        }
+
+        header .navbar ul li a {
+            font-size: 18px;
+            padding: 10px;
+            color: black;
+            display: block;
+            font-family: Noto Sans;
+            font-weight: 500;
+        }
+
+        header .navbar ul li a:hover {
+            color: green;
+
+        }
+
+        header .navbar ul li ul {
+            position: absolute;
+            left: 0;
+            width: 200px;
+            background-color: #F3E9C4;
+            ;
+            display: none;
+        }
+
+        header .navbar ul li ul li {
+            width: 100%;
+
+        }
+
+        header .navbar ul li:focus-within>ul,
+        header .navbar ul li:hover>ul {
+            display: initial;
+        }
+
+        #menu-bar {
+            display: none;
+        }
+
+        header label {
+            font-size: 20px;
+            color: #333;
+            cursor: pointer;
+            display: none;
+        }
+
+        .header-icon {
+            margin-left: auto;
             list-style: none;
             display: flex;
+            align-items: flex-end;
         }
 
-        .menu-bar ul li {
-            padding: 10px 15px;
-            position: relative;
-        }
-
-        .menu-bar ul li a {
+        .fa-solid {
             color: black;
-            text-decoration: none;
-            font-size: 16px;
-            transition: all 0.5s;
-            font-weight: 600;
+            margin: 2px;
         }
 
-        .menu-bar ul li a:hover {
-            color: green;
-        }
-
-        /* dropdown */
-        .dropdown-menu-wedding {
-            display: none;
-        }
-
-        .dropdown-menu-news {
-            display: none;
-        }
-
-        .dropdown-menu-recommend {
-            display: none;
-        }
-
-        .dropdown-menu-category {
-            display: none;
-        }
-
-        .dropdown-menu-about {
-            display: none;
-        }
-
-        /* dropdown */
-        .menu-bar ul li:hover .dropdown-menu-wedding {
-            display: block;
-            position: absolute;
-            left: 0;
-            top: 100%;
-            background-color: #F3E9C4;
-        }
-
-        .menu-bar ul li:hover .dropdown-menu-news {
-            display: block;
-            position: absolute;
-            left: 0;
-            top: 100%;
-            background-color: #F3E9C4;
-        }
-
-        .menu-bar ul li:hover .dropdown-menu-recommend {
-            display: block;
-            position: absolute;
-            left: 0;
-            top: 100%;
-            background-color: #F3E9C4;
-        }
-
-        .menu-bar ul li:hover .dropdown-menu-category {
-            display: block;
-            position: absolute;
-            left: 0;
-            top: 100%;
-            background-color: #F3E9C4;
-        }
-
-        .menu-bar ul li:hover .dropdown-menu-about {
-            display: block;
-            position: absolute;
-            left: 0;
-            top: 100%;
-            background-color: #F3E9C4;
-        }
-
-        /* dropdown */
-        .dropdown-menu-wedding ul {
-            display: block;
-            margin: 10px;
-        }
-
-        .dropdown-menu-news ul {
-            display: block;
-            margin: 10px;
-        }
-
-        .dropdown-menu-recommend ul {
-            display: block;
-            margin: 10px;
-        }
-
-        .dropdown-menu-category ul {
-            display: block;
-            margin: 10px;
-        }
-
-        .dropdown-menu-about ul {
-            display: block;
-            margin: 10px;
-        }
-
-        /* dropdown */
-        .dropdown-menu-wedding ul li {
-            width: 150px;
-            padding: 10px;
-        }
-
-        .dropdown-menu-news ul li {
-            width: 150px;
-            padding: 10px;
-        }
-
-        .dropdown-menu-recommend ul li {
-            width: 150px;
-            padding: 10px;
-        }
-
-        .dropdown-menu-category ul li {
-            width: 150px;
-            padding: 10px;
-        }
-
-        .dropdown-menu-about ul li {
-            width: 150px;
-            padding: 10px;
-        }
-
-        .fas {
-            float: right;
-            padding-top: 3px;
+        .icon-hb {
             margin-left: 10px;
         }
 
-        /* gotop */
-        .gotop i {
-            position: fixed;
-            width: 50px;
-            height: 50px;
-            background-color: #00501B;
-            bottom: 10px;
-            right: 10px;
-            text-align: center;
-            line-height: 50px;
-            border-radius: 50%;
-            color: #fff;
+        .search-box {
+            display: none;
         }
+        /* .search-icon:hover .fa-magnifying-glass {
+        display: none;}  */
+         /* 隱藏放大鏡圖示 */
 
+        .search-icon:hover .search-box {
+            display: block;
+            width: 200px;
+            height: 30px;
+            margin-right: 10px;
+            border-radius: 5px;
+            display: inline;
+        }
+        .fa-caret-down{
+            margin: 10px;
+        }
+        /* banner */
         .banner {
             display: flex;
             align-items: center;
@@ -219,7 +159,7 @@
             color: #000000;
             background-color: #fff;
             width: 200px;
-            height: 80px;
+            /* height: 80px; */
             opacity: 50%;
             font-weight: 400;
         }
@@ -355,67 +295,158 @@
             background-color: #F3E9C4;
             font-family: Noto Sans TC;
         }
+        
+        @media screen and (max-width:430px) {
+            /* rwd */
+            header {
+                padding: 20px;
+                width: 100%;
+                position: sticky;
+            }
 
+            header label {
+                display: initial;
+            }
+
+            header .navbar {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #F3E9C4;
+                border-top: 1px solid #aaa;
+            }
+
+            header .navbar ul li {
+                width: 100%;
+            }
+
+            header .navbar ul li ul {
+                position: relative;
+                width: 100%;
+            }
+
+            header .navbar ul li ul li {
+                background: #fff;
+                border-top: 1px solid #aaa;
+            }
+
+            #menu-bar:checked~.navbar {
+                display: block;
+            }
+            .search-icon:hover .search-box{
+                width: 100px;
+                height: 30px;
+            }
+            .navbar {
+                display: none;
+            }
+            /* banner */
+            .banner img{
+                width: 100%;
+                height: 240px;
+            }
+            .banner .courses-title{
+                font-size: 18px;
+                margin-top: 10px;
+            }
+            .flower-course {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+            .big-left{
+                width: 90%;
+            }
+            .des-section{
+                width: 60%;
+            }
+            .flower-course-title{
+                font-size: 14px;
+                margin-top: 10px;
+                display: flex;
+                justify-content: center;
+            }
+            #flower-list-1, #flower-list-2{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .small{
+                width: 60px;
+                height: 60px;
+            }
+            .date{
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <a class=" gotop" href="#"><i class="fas fa-arrow-up"></i></a>
-    <div class="menu-bar">
+    <header>
         <div class="logo">
-            <a href="index.html"><img src="logo.png" alt=""></a>
+            <a href="#"><img src="logo.png"></a>
         </div>
-
-        <ul>
-            <li><a href="#">關於我們<i class="fas fa-caret-down"></i></a>
-                <div class="dropdown-menu-about">
+        <input type="checkbox" id="menu-bar">
+        <!-- <label for="menu-bar">me</label> -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">關於我們<i class="fas fa-caret-down"></i></a>
                     <ul>
                         <li><a href="#">花語故事</a></li>
                         <li><a href="#">品牌故事</a></li>
                     </ul>
-                </div>
-            </li>
-            <li><a href="#">花禮分類<i class="fas fa-caret-down"></i></a>
-                <div class="dropdown-menu-category">
+                </li>
+                <li><a href="#">花禮分類<i class="fas fa-caret-down"></i></a>
                     <ul>
                         <li><a href="#">鮮花束</a></li>
                         <li><a href="#">鮮花花盆</a></li>
                     </ul>
-                </div>
-            </li>
-            <li><a href="#">送花推薦<i class="fas fa-caret-down"></i></a>
-                <div class="dropdown-menu-recommend">
+                </li>
+                <li><a href="#">送花推薦<i class="fas fa-caret-down"></i></a>
                     <ul>
                         <li><a href="#">生日花束</a></li>
-                        <li><a href="#">母親節花束</a></li>
                         <li><a href="#">畢業花束</a></li>
+                        <li><a href="#">母親節花束</a></li>
                         <li><a href="#">情人節花束</a></li>
                     </ul>
-                </div>
-            </li>
-            <li><a href="#">最新消息<i class="fas fa-caret-down"></i></a>
-                <div class="dropdown-menu-news">
+                </li>
+                <li><a href="#">最新消息<i class="fas fa-caret-down"></i></a>
                     <ul>
                         <li><a href="#">活動推薦</a></li>
                         <li><a href="#">得獎紀錄</a></li>
                     </ul>
-                </div>
-            </li>
-
-            <li><a href="#">婚禮系列<i class="fas fa-caret-down"></i></a>
-                <div class="dropdown-menu-wedding">
+                </li>
+                <li><a href="#">婚禮系列<i class="fas fa-caret-down"></i></a>
                     <ul>
                         <li><a href="#">胸花系列</a></li>
                         <li><a href="#">捧花系列</a></li>
                         <li><a href="#">客製化花圈</a></li>
                     </ul>
-                </div>
+                </li>
+            </ul>
+        </nav>
+    
+        <ul class="header-icon">
+            <li class="search-icon">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <input type="text" placeholder="Search..." class="search-box" style="color: black;">
             </li>
-            <li><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
-            <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+    
             <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+    
+            <li class="icon-hb">
+                <a href="#">
+                    <label for="menu-bar"><label for="menu-bar" class="icon-hb"></label>
+                        <i class="fa-solid fa-bars"></i>
+                </a>
+            </li>
         </ul>
-    </div>
+    </header>
+    
     <!-- banner -->
     <div class="banner">
         <img src="pictures/lesson-bg.jpg" alt="">

@@ -53,10 +53,11 @@
 
         header .navbar ul li a {
             font-size: 18px;
-            padding: 20px;
+            padding: 10px;
             color: black;
             display: block;
             font-family: Noto Sans;
+            font-weight: 500;
         }
 
         header .navbar ul li a:hover {
@@ -102,9 +103,11 @@
 
         .fa-solid {
             color: black;
-            margin: 14px;
+            margin: 2px;
         }
-
+        .fa-caret-down{
+            margin: 10px;
+        }
         .icon-hb {
             margin-left: 10px;
         }
@@ -279,7 +282,7 @@
         justify-self: start;
         }
          /* rwd */
-        @media screen and (max-width:991px) {
+        @media screen and (max-width:430px) {
             header {
                 padding: 20px;
                 width: 100%;
@@ -324,19 +327,57 @@
                 display: none;
             }
             /* banner */
-            .banner p strong{
-                font-size: 30px;
+            .flower-story-title{
+                margin-right: 60px auto 0;
+            }
+            .main-block{
+                width: 90%;
+                margin: 20px auto 0;
+            }
+            .main-block-word{
+                margin: 20px auto 20px;
+            }
+            .title-pink{
+                margin: auto;
+            }
+            .title-blue {
+                margin: auto;
+            }
+            .large img{
+                margin-left: 210px;
+            }
+            .main-block img{
+            display: none;
+            }
+            .info-card{
+                display: flex;
+                flex-direction: column;
+            }
+            h6{
                 display: flex;
                 justify-content: center;
-                text-align: center;
-                color: #fff;
-                margin-left: 30px;
-                position: absolute;
-                top: 50%;
-                left: 3%;
             }
-            .banner .banner-location{
+            .words{
+                width: 100%;
+            }
+            .more-imgs{
                 display: none;
+            }
+            /* footer rwd */
+            .footer-logo img{
+            display: none;
+            }
+            .site-footer, .footer-info{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .footer-title{
+                display: none;
+            }
+            .footer-info{
+                margin: 10px 0 10px;
             }
         }
     </style>
@@ -352,19 +393,19 @@
         <!-- <label for="menu-bar">me</label> -->
         <nav class="navbar">
             <ul>
-                <li><a href="#">關於我們</a>
+                <li><a href="#">關於我們<i class="fas fa-caret-down"></i></a>
                     <ul>
                         <li><a href="#">花語故事</a></li>
                         <li><a href="#">品牌故事</a></li>
                     </ul>
                 </li>
-                <li><a href="#">花禮分類</a>
+                <li><a href="#">花禮分類<i class="fas fa-caret-down"></i></a>
                     <ul>
                         <li><a href="#">鮮花束</a></li>
                         <li><a href="#">鮮花花盆</a></li>
                     </ul>
                 </li>
-                <li><a href="#">送花推薦</a>
+                <li><a href="#">送花推薦<i class="fas fa-caret-down"></i></a>
                     <ul>
                         <li><a href="#">生日花束</a></li>
                         <li><a href="#">畢業花束</a></li>
@@ -372,13 +413,13 @@
                         <li><a href="#">情人節花束</a></li>
                     </ul>
                 </li>
-                <li><a href="#">最新消息</a>
+                <li><a href="#">最新消息<i class="fas fa-caret-down"></i></a>
                     <ul>
                         <li><a href="#">活動推薦</a></li>
                         <li><a href="#">得獎紀錄</a></li>
                     </ul>
                 </li>
-                <li><a href="#">婚禮系列</a>
+                <li><a href="#">婚禮系列<i class="fas fa-caret-down"></i></a>
                     <ul>
                         <li><a href="#">胸花系列</a></li>
                         <li><a href="#">捧花系列</a></li>
