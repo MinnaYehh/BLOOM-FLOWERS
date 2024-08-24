@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BLOOM FLOWERS</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
 /* 導覽列 */
@@ -19,6 +17,7 @@
             box-sizing: border-box;
             text-transform: capitalize;
             text-decoration: none;
+            font-family: Noto Serif TC;
         }
         .logo img {
             width: 60px;
@@ -40,6 +39,7 @@
             z-index: 1000;
             background-color: #F2F1ED;
             width: 100%;
+            padding: .5rem 9%;
         }
 
         header .navbar ul {
@@ -56,7 +56,6 @@
             padding: 10px;
             color: black;
             display: block;
-            font-family: Noto Sans;
             font-weight: 500;
         }
 
@@ -114,9 +113,7 @@
         .search-box {
             display: none;
         }
-        /* .search-icon:hover .fa-magnifying-glass {
-        display: none;}  */
-         /* 隱藏放大鏡圖示 */
+
 
         .search-icon:hover .search-box {
             display: block;
@@ -133,31 +130,26 @@
         /* banner */
         .banner img {
             width: 100%;
-            height: 100%;
+            height: 500px;
             margin: auto;
             display: block;
             align-items: center;
-            background-position: 70%;
-            background-size: cover;
         }
 
         .banner p strong {
-            /* font-family: Alegreya Sans; */
             letter-spacing: 8px;
-            font-size: 70px;
+            font-size: 40px;
             position: absolute;
-            top: 50%;
+            left: 10%;
+            top: 30%;
             margin-right: auto;
             color: #fff;
             width: 80%;
         }
 
         .banner-location {
-            font-family: Alegreya Sans;
-            font-size: 35px;
+            font-size: 40px;
             color: #fff;
-            border-bottom: 3px solid #fff;
-            display: inline;
         }
 
         h2 {
@@ -165,6 +157,7 @@
             color: #00501b;
             padding-top: 20px;
             padding-bottom: 20px;
+            background-color: #fff;
         }
 
         section {
@@ -178,6 +171,7 @@
 
         .card-area {
             padding: 30px 0 30px;
+            background-color: #fff;
         }
 
         .box-area {
@@ -222,7 +216,6 @@
             font-weight: 600;
             margin-bottom: 5px;
             margin-top: 80%;
-            font-family: bebas neue;
             font-size: 15px;
             color: #00501b;
         }
@@ -258,7 +251,7 @@
         }
 
         .story-section .story-section-img-left {
-            width: 30%;
+            width: 0%;
         }
 
         .story-section .story-section-img-left img {
@@ -267,7 +260,7 @@
         }
 
         .story-section .story-section-img-right {
-            width: 30%;
+            /* width: 30%; */
             margin-left: auto;
             display: flex;
             justify-content: end;
@@ -287,7 +280,6 @@
         }
 
         .story-title {
-            font-family: Noto Serif TC;
             font-size: 18px;
             color: black;
         }
@@ -298,7 +290,7 @@
             align-items: center;
             flex-direction: column;
             justify-content: center;
-            margin: auto;
+            /* margin: auto; */
         }
 
         .story-section-btn .my-btn {
@@ -307,7 +299,6 @@
             color: #ffffff;
             border: none;
             border-radius: 5px;
-            font-family: 'Alegreya Sans', sans-serif;
             font-size: 13px;
             cursor: pointer;
             transition: background-color 0.3s;
@@ -325,7 +316,7 @@
 
         .promise-section .promise-section-list img {
             width: 200px;
-            height: 200px;
+            /* height: 200px; */
             margin: 10px 40px 10px;
             transition: transform 0.5s;
         }
@@ -341,6 +332,8 @@
             display: flex;
             flex-direction: row;
             justify-content: center;
+            padding: 50px 0px 50px;
+            background-color: #fff;
         }
         .promise-section .promise-section-list .radius-card .promise-slogan{
             text-align: center;
@@ -357,7 +350,6 @@
         .highlight {
             font-size: 32px;
             color: darkred;
-            font-family: Alex Brush;
         }
 
         /* bless-section */
@@ -373,6 +365,7 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
+            background-color: #fff;
         }
 
         .bless-section-card {
@@ -393,7 +386,6 @@
             align-items: center;
         }
         .bless-section .bless-section-list img:hover {
-            /* filter: brightness(120%); */
             opacity: 50%;
         }
         .addToCart{
@@ -429,6 +421,7 @@
         .promise-word {
             text-align: center;
             font-size: 16px;
+            background-color: #fff;
         }
 
         /* footer */
@@ -437,7 +430,7 @@
             background-color: #F3E9C4;
             display: flex;
             justify-content: space-between;
-            padding: 20px;
+            padding: 40px;
         }
 
         .footer-logo img {
@@ -447,7 +440,6 @@
 
         .footer-title {
             font-size: 14px;
-            font-family: Noto Sans TC;
             border-bottom: 2px solid black;
             display: inline;
             font-weight: 500;
@@ -455,7 +447,6 @@
 
         p {
             font-size: 12px;
-            font-family: Noto Sans TC;
         }
 
         .footer-info {
@@ -467,7 +458,6 @@
             font-size: 12px;
             color: black;
             display: block;
-            font-family: Noto Sans TC;
         }
 
         .social-media {
@@ -485,19 +475,18 @@
 
         .bottom p {
             background-color: #F3E9C4;
-            font-family: Noto Sans TC;
             text-align: center;
             font-size: 10px;
         }
         /* florist */
         .florist-section{
             width:100%;
-            height: 280px;
+            height: 350px;
             background-color: #DDF2E7;
-            margin-bottom: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
+            background-color: #fff;
         }
         
         .florist-one{
@@ -528,6 +517,7 @@
         }
         .florist-part{
             width: 45%;
+            background-color: #DDF2E7;
         }
         .florist-intro{
             width: 90%;
@@ -539,6 +529,7 @@
         .florist-describe{
             display: flex;
             flex-direction: column;
+            background-color: #DDF2E7;
         }
         h5{
             font-size: 20px;
@@ -548,8 +539,7 @@
             text-align: center;
             font-size: 24px;
             width: 100%;
-            background-color: #DDF2E7;
-            margin-top: 20px;
+            background-color: #fff;
         } 
         
         /* rwd */
@@ -648,7 +638,7 @@
             display: none;
             }
             .promise-section .promise-section-list {
-                margin: 20px 0 0;
+                padding: 10px 0 50px;
                 display: flex;
                 flex-direction:column;
                 justify-content: center;
@@ -666,7 +656,7 @@
             .florist-list{
             display: flex;
             flex-direction: column;
-            margin-top: 20px;
+            background-color: #DDF2E7;
             height: auto;
             }
             .florist-one img, .florist-two img{
@@ -737,19 +727,19 @@
     <!-- <label for="menu-bar">me</label> -->
     <nav class="navbar">
         <ul>
-            <li><a href="#">關於我們<i class="fas fa-caret-down"></i></a>
+            <li><a href="#">關於我們</a>
                 <ul>
                     <li><a href="project-03.html">花語故事</a></li>
                     <li><a href="project-05.html">品牌故事</a></li>
                 </ul>
             </li>
-            <li><a href="#">花禮分類<i class="fas fa-caret-down"></i></a>
+            <li><a href="#">花禮分類</a>
                 <ul>
                     <li><a href="project-02.html">鮮花束</a></li>
                     <li><a href="project-02.html">鮮花花盆</a></li>
                 </ul>
             </li>
-            <li><a href="#">送花推薦<i class="fas fa-caret-down"></i></a>
+            <li><a href="#">送花推薦</a>
                 <ul>
                     <li><a href="project-02.html">生日花束</a></li>
                     <li><a href="project-02.html">畢業花束</a></li>
@@ -757,17 +747,10 @@
                     <li><a href="project-02.html">情人節花束</a></li>
                 </ul>
             </li>
-            <li><a href="#">最新消息<i class="fas fa-caret-down"></i></a>
+            <li><a href="#">最新消息</a>
                 <ul>
                     <li><a href="project-04.html">活動推薦</a></li>
                     <li><a href="project-04.html">得獎紀錄</a></li>
-                </ul>
-            </li>
-            <li><a href="#">婚禮系列<i class="fas fa-caret-down"></i></a>
-                <ul>
-                    <li><a href="project-02.html">胸花系列</a></li>
-                    <li><a href="project-02.html">捧花系列</a></li>
-                    <li><a href="project-02.html">客製化花圈</a></li>
                 </ul>
             </li>
         </ul>
@@ -792,11 +775,11 @@
 </header>
 
     <div class="banner"data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
-        <img src="pictures/banner.jpg" alt="">
+        <img src="banner-2.jpeg" alt="">
         <p><strong>
-                BLOOM<br>
-                FLOWERS<br>
-                <span class="banner-location">TAOYUAN</span></strong>
+                <br>用美麗的花朵
+                <br>
+                <span class="banner-location">獻給最美麗的您</span></strong>
         </p>
     </div>
 
@@ -845,7 +828,7 @@
     </div>
 </section>
 
-<section class="story-section" data-aos="fade-up"
+<!-- <section class="story-section" data-aos="fade-up"
 data-aos-anchor-placement="top-center" data-aos-duration="1000">
     <div class="story-section-img-left">
         <img src="pictures/vase-01.jpg" alt="">
@@ -864,7 +847,7 @@ data-aos-anchor-placement="top-center" data-aos-duration="1000">
     <div class="story-section-img-right">
         <img src="pictures/vase-02.jpg" alt="">
     </div>
-</section>
+</section> -->
 
 <section class="promise-section">
     <h2>三大保證</h2>
@@ -884,7 +867,7 @@ data-aos-anchor-placement="top-center" data-aos-duration="1000">
     </div>
 </section>
 <!-- effect -->
-<section class="bless" data-aos="zoom in" data-aos-easing="linear" data-aos-duration="1000">
+<section>
 <section class="bless-section">
     <h2>小小心意 | 滿滿祝福</h2>
     <p class="promise-word">一朵花，訴說著對你的思念。</p>
@@ -913,7 +896,7 @@ data-aos-anchor-placement="top-center" data-aos-duration="1000">
 </section>
 
 
-<section class="bless-section" data-aos="zoom in" data-aos-easing="linear" data-aos-duration="1000">
+<section class="bless-section">
     <div class="bless-section-list">
         <div class="bless-section-card">
             <img src="pictures/bless-04.jpg" alt="">
@@ -933,7 +916,6 @@ data-aos-anchor-placement="top-center" data-aos-duration="1000">
             <span class="bless-highlight">低調鬱金香</span>
         </div>
     </div>
-</section>
 </section>
 
 <!-- 花藝師介紹 -->
@@ -1012,7 +994,8 @@ data-aos-anchor-placement="top-center" data-aos-duration="1000">
     offset: 200, // 觸發動畫前的滾動距離（像素）
     duration: 600, // 動畫持續時間（毫秒）
     easing: 'ease-in-sine', // 動畫的緩動曲線
-    delay: 100, // 動畫開始的延遲時間（毫秒）
+    // delay: 100, 
+    // 動畫開始的延遲時間（毫秒）
     once: false, // 是否只顯示一次動畫
     mirror: false, // 是否應該在滾動時動畫元素出現在視圖中    
     });
