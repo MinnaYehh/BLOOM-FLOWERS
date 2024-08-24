@@ -7,7 +7,7 @@
     <title>login-page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
         
@@ -15,12 +15,12 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Poppins", Noto Sans TC;
+            font-family: Noto Serif TC;
             text-decoration: none;
         }
         body{
-        min-height: 100vh;
-        background-color: #EFEBC6;
+        min-height: 90vh;
+
         }
         .logo img {
             width: 65px;
@@ -40,6 +40,7 @@
             z-index: 1000;
             background-color: #F2F1ED;
             width: 100%;
+            padding: .5rem 9%;
         }
 
         header .navbar ul {
@@ -53,10 +54,9 @@
 
         header .navbar ul li a {
             font-size: 18px;
-            padding: 10px;
+            padding: 20px;
             color: black;
             display: block;
-            font-family: Noto Sans;
             font-weight: 500;
         }
 
@@ -104,8 +104,7 @@
 
         .fa-solid {
             color: black;
-            margin-top: 2px;
-            margin-right: 4px;
+            margin: 10px;
         }
 
         .icon-hb {
@@ -115,10 +114,6 @@
         .search-box {
             display: none;
         }
-        /* .search-icon:hover .fa-magnifying-glass {
-        display: none;}  */
-         /* 隱藏放大鏡圖示 */
-
         .search-icon:hover .search-box {
             display: block;
             width: 200px;
@@ -133,6 +128,7 @@
         }
 
         .login-interface{
+        padding-top: 50px;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -253,62 +249,6 @@
         justify-content: center;
         font-size: 26px;
         }
-        /* footer */
-        /* .site-footer {
-            width: 100%;
-            background-color: #F3E9C4;
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-        }
-
-        .footer-logo img {
-            height: 100px;
-            width: 100px;
-        }
-
-        .footer-title {
-            font-size: 14px;
-            font-family: Noto Sans TC;
-            border-bottom: 2px solid black;
-            display: inline;
-            font-weight: 500;
-        }
-        p {
-            font-size: 12px;
-            font-family: Noto Sans TC;
-        }
-
-        .footer-info {
-            padding-top: 15px;
-        }
-
-        .footer-info a {
-            text-decoration: none;
-            font-size: 12px;
-            color: black;
-            display: block;
-            font-family: Noto Sans TC;
-        }
-
-        .social-media {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .social-media a {
-            margin: 0px 5px 0px;
-            justify-content: center;
-            align-items: center;
-            color: black;
-        }
-
-        .bottom p {
-            background-color: #F3E9C4;
-            font-family: Noto Sans TC;
-            text-align: center;
-        } */
          /* rwd */
         @media screen and (max-width:430px) {
             /* navbar  */
@@ -355,23 +295,6 @@
             .navbar {
                 display: none;
             }
-            /* footer rwd */
-            /* .footer-logo img{
-            display: none;
-            }
-            .site-footer, .footer-info{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-            .footer-title{
-                display: none;
-            }
-            .footer-info{
-                margin: 10px 0 10px;
-            } */
-
         }
     </style>
 </head>
@@ -385,46 +308,40 @@
         <!-- <label for="menu-bar">me</label> -->
         <nav class="navbar">
             <ul>
-                <li><a href="#">關於我們<i class="fas fa-caret-down"></i></a>
+                <li><a href="#">關於我們</a>
                     <ul>
-                        <li><a href="project-03.html">花語故事</a></li>
-                        <li><a href="project-05.html">品牌故事</a></li>
+                        <li><a href="flower_story.html">花語故事</a></li>
+                        <li><a href="about_story.html">品牌故事</a></li>
                     </ul>
                 </li>
-                <li><a href="#">花禮分類<i class="fas fa-caret-down"></i></a>
+                <li><a href="#">花禮分類</a>
                     <ul>
                         <li><a href="#">鮮花束</a></li>
                         <li><a href="#">鮮花花盆</a></li>
                     </ul>
                 </li>
-                <li><a href="#">送花推薦<i class="fas fa-caret-down"></i></a>
+                <li><a href="#">送花推薦</a>
                     <ul>
-                        <li><a href="project-02.html">生日花束</a></li>
-                        <li><a href="project-02.html">畢業花束</a></li>
-                        <li><a href="project-02.html">母親節花束</a></li>
-                        <li><a href="project-02.html">情人節花束</a></li>
+                        <li><a href="#">生日花束</a></li>
+                        <li><a href="#">畢業花束</a></li>
+                        <li><a href="mom.html">母親節花束</a></li>
+                        <li><a href="#">情人節花束</a></li>
                     </ul>
                 </li>
-                <li><a href="#">最新消息<i class="fas fa-caret-down"></i></a>
+                <li><a href="#">最新消息</a>
                     <ul>
-                        <li><a href="project-04.html">活動推薦</a></li>
-                        <li><a href="project-04.html">得獎紀錄</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">婚禮系列<i class="fas fa-caret-down"></i></a>
-                    <ul>
-                        <li><a href="project-02.html">胸花系列</a></li>
-                        <li><a href="project-02.html">捧花系列</a></li>
-                        <li><a href="project-02.html">客製化花圈</a></li>
+                        <li><a href="courses.html">活動推薦</a></li>
+                        <li><a href="#">得獎紀錄</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
     
         <ul class="header-icon">
+            <!-- <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li> -->
             <li class="search-icon">
                 <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                <input type="text" placeholder="Search..." class="search-box" style="color: #fff;">
+                <input type="text" placeholder="Search..." class="search-box" style="color: black;">
             </li>
     
             <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
@@ -445,13 +362,12 @@
                 <h2>Hello Friends!</h2>
                 <div class="input-box">
                     <input type="text" placeholder="Username" required>
-                    <i class="fa-solid fa-user"></i> <!-- user -->
+             <!-- user -->
                 </div>
 
             <div class="input-box">
                 <input type="password" placeholder="Password" required>
-
-                <i class="fa-solid fa-lock"></i><!-- lock -->
+            <!-- lock -->
             </div>
             <div class="remember-forgot">
                 <label><input type="checkbox">勾選後記住我</label>
